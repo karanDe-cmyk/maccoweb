@@ -104,13 +104,13 @@ const Footerpage = () => {
             {/* Services */}
             <div className="w-full">
               <h5 className="text-lg font-semibold mb-4 text-white">Services</h5>
-              <ul className="space-y-3">
-                <li><a href="#" className="hover:text-blue-400 transition-colors flex items-center"><Globe className="w-4 h-4 mr-2" /> Hire Dedicated Developers</a></li>
-                <li><a href="#" className="hover:text-blue-400 transition-colors flex items-center"><Globe className="w-4 h-4 mr-2" /> Web App Development</a></li>
-                <li><a href="#" className="hover:text-blue-400 transition-colors flex items-center"><Globe className="w-4 h-4 mr-2" /> Mobile App Development</a></li>
-                <li><a href="#" className="hover:text-blue-400 transition-colors flex items-center"><Globe className="w-4 h-4 mr-2" /> Search Engine Optimization</a></li>
-                <li><a href="#" className="hover:text-blue-400 transition-colors flex items-center"><Globe className="w-4 h-4 mr-2" /> Pay-Per-Click</a></li>
-                <li><a href="#" className="hover:text-blue-400 transition-colors flex items-center"><Globe className="w-4 h-4 mr-2" /> Social Media Marketing</a></li>
+              <ul className="space-y-3 ">
+                <li><a href="#" className="hover:text-blue-400 transition-colors flex items-center text-sm"><Globe className="w-4 h-4 mr-2" /> Hire Dedicated Developers</a></li>
+                <li><a href="#" className="hover:text-blue-400 transition-colors flex items-center text-sm"><Globe className="w-4 h-4 mr-2" /> Web App Development</a></li>
+                <li><a href="#" className="hover:text-blue-400 transition-colors flex items-center text-sm"><Globe className="w-4 h-4 mr-2" /> Mobile App Development</a></li>
+                <li><a href="#" className="hover:text-blue-400 transition-colors flex items-center text-sm"><Globe className="w-4 h-4 mr-2" /> Search Engine Optimization</a></li>
+                <li><a href="#" className="hover:text-blue-400 transition-colors flex items-center text-sm"><Globe className="w-4 h-4 mr-2" /> Pay-Per-Click</a></li>
+                <li><a href="#" className="hover:text-blue-400 transition-colors flex items-center text-sm"><Globe className="w-4 h-4 mr-2" /> Social Media Marketing</a></li>
               </ul>
             </div>
 
@@ -118,12 +118,12 @@ const Footerpage = () => {
             <div className="w-full">
               <h5 className="text-lg font-semibold mb-4 text-white ">Industries</h5>
               <ul className="space-y-3 ">
-                <li><a href="#" className="hover:text-blue-400 transition-colors flex items-center"><Globe className="w-4 h-4 mr-2" /> Healthcare</a></li>
-                <li><a href="#" className="hover:text-blue-400 transition-colors flex items-center"><Globe className="w-4 h-4 mr-2" /> Education</a></li>
-                <li><a href="#" className="hover:text-blue-400 transition-colors flex items-center"><Globe className="w-4 h-4 mr-2" /> Retail</a></li>
-                <li><a href="#" className="hover:text-blue-400 transition-colors flex items-center"><Globe className="w-4 h-4 mr-2" /> Logistics</a></li>
-                <li><a href="#" className="hover:text-blue-400 transition-colors flex items-center"><Globe className="w-4 h-4 mr-2" /> Oil & Gas</a></li>
-                <li><a href="#" className="hover:text-blue-400 transition-colors flex items-center"><Globe className="w-4 h-4 mr-2" /> Music & Video</a></li>
+                <li><a href="#" className="hover:text-blue-400 transition-colors flex items-center text-sm"><Globe className="w-4 h-4 mr-2" /> Healthcare</a></li>
+                <li><a href="#" className="hover:text-blue-400 transition-colors flex items-center text-sm"><Globe className="w-4 h-4 mr-2" /> Education</a></li>
+                <li><a href="#" className="hover:text-blue-400 transition-colors flex items-center text-sm"><Globe className="w-4 h-4 mr-2" /> Retail</a></li>
+                <li><a href="#" className="hover:text-blue-400 transition-colors flex items-center text-sm"><Globe className="w-4 h-4 mr-2" /> Logistics</a></li>
+                <li><a href="#" className="hover:text-blue-400 transition-colors flex items-center text-sm"><Globe className="w-4 h-4 mr-2" /> Oil & Gas</a></li>
+                <li><a href="#" className="hover:text-blue-400 transition-colors flex items-center text-sm"><Globe className="w-4 h-4 mr-2" /> Music & Video</a></li>
               </ul>
             </div>
 
@@ -131,12 +131,12 @@ const Footerpage = () => {
             <div className="w-full">
               <h5 className="text-lg font-semibold mb-4 text-white">Portfolio</h5>
               <ul className="space-y-3">
-                <li><a href="#" className="hover:text-blue-400 transition-colors flex items-center"><Star className="w-4 h-4 mr-2" /> StockNow - Investment App</a></li>
-                <li><a href="#" className="hover:text-blue-400 transition-colors flex items-center"><Star className="w-4 h-4 mr-2" /> Dochelp - Patient Monitoring</a></li>
-                <li><a href="#" className="hover:text-blue-400 transition-colors flex items-center"><Star className="w-4 h-4 mr-2" /> Roster - Pizza Delivery</a></li>
-                <li><a href="#" className="hover:text-blue-400 transition-colors flex items-center"><Star className="w-4 h-4 mr-2" /> Nikea - Logo Design</a></li>
-                <li><a href="#" className="hover:text-blue-400 transition-colors flex items-center"><Star className="w-4 h-4 mr-2" /> Eptire - Blockchain Solution</a></li>
-                <li><a href="#" className="hover:text-blue-400 transition-colors flex items-center"><Star className="w-4 h-4 mr-2" /> ShopTop - Grocery App</a></li>
+                <li><a href="#" className="hover:text-blue-400 transition-colors flex items-center text-sm"><Star className="w-4 h-4 mr-2" /> StockNow - Investment App</a></li>
+                <li><a href="#" className="hover:text-blue-400 transition-colors flex items-center text-sm"><Star className="w-4 h-4 mr-2" /> Dochelp - Patient Monitoring</a></li>
+                <li><a href="#" className="hover:text-blue-400 transition-colors flex items-center text-sm"><Star className="w-4 h-4 mr-2" /> Roster - Pizza Delivery</a></li>
+                <li><a href="#" className="hover:text-blue-400 transition-colors flex items-center text-sm"><Star className="w-4 h-4 mr-2" /> Nikea - Logo Design</a></li>
+                <li><a href="#" className="hover:text-blue-400 transition-colors flex items-center text-sm"><Star className="w-4 h-4 mr-2" /> Eptire - Blockchain Solution</a></li>
+                <li><a href="#" className="hover:text-blue-400 transition-colors flex items-center text-sm"><Star className="w-4 h-4 mr-2" /> ShopTop - Grocery App</a></li>
               </ul>
             </div>
           </div>

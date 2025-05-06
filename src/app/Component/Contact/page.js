@@ -112,7 +112,7 @@ export default function Contact() {
     <section className="min-h-[40vh] mx-auto px-6 sm:px-8 lg:px-12 py-24 bg-gradient-to-br from-blue-100 via-indigo-200 to-purple-100">
       <div className="container mx-auto flex flex-col lg:flex-row items-center justify-between shadow-xl rounded-3xl overflow-hidden">
         {/* Left Text Content */}
-        <div className={`lg:w-1/2 p-14 bg-indigo-200/80 backdrop-blur-sm text-gray-700 transform transition-all duration-700 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
+        <div className={`lg:w-1/2 p-10 bg-indigo-200/80 backdrop-blur-sm text-gray-700 transform transition-all duration-700 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
           <h2 className="text-2xl font-semibold text-blue-600 mb-6 uppercase tracking-wider">Let's Innovate Together</h2>
           <h3 className="text-4xl font-bold text-gray-800 mb-9 leading-tight">Ready to Build Something Amazing?</h3>
           <p className="text-lg text-gray-600 mb-7">

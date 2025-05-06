@@ -4,7 +4,7 @@ import Navbar from '../Component/Navbar/page';
 
 import Link from 'next/link';
 import CountUp from 'react-countup';
-
+import Image from 'next/image';
 import { FaUsers, FaCode, FaChartLine, FaShoppingCart, FaCloud, FaMobileAlt } from 'react-icons/fa';
 import OurValuesSection from '../Component/OurValuesSection/page';
 import TransparencyEthics from '../Component/TransparencyEthics/page';
@@ -47,116 +47,23 @@ function AboutUsPage() {
 
                     {/* Image Section */}
                     <div className="w-full lg:w-1/2 rounded-lg overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-300">
-                        <img
+                        {/* <img
                             src="https://www.gavinwillis.co.uk/wp-content/uploads/2017/03/five_reasons_blog.jpeg" // Replace with actual image path
                             alt="Our team collaborating"
                             className="w-full h-auto object-cover"
-                        />
+                        /> */}
+                        <Image
+              src="https://www.gavinwillis.co.uk/wp-content/uploads/2017/03/five_reasons_blog.jpeg"
+              alt="Our team collaborating"
+              width={800}
+              height={500}
+              className="w-full h-auto object-cover"
+            />
                     </div>
                 </div>
             </section>
 
-            {/* <section className="py-16 bg-gray-50">
-      <div className="container mx-auto px-6 md:px-8 lg:px-12 xl:px-16">
-        
-        <div className="text-center mb-12">
-          <h2 className=" font-bold text-gray-700 sm:text-3xl lg:text-3xl mb-4">
-            The Reevan - Your Digital Growth Partner
-          </h2>
-          <p className="text-lg text-gray-700 leading-relaxed max-w-2xl mx-auto">
-            Based in India, Reevan is a full-service powerhouse for web, app, and digital marketing.
-            We empower businesses with innovative digital products, leveraging the latest technologies
-            and the expertise of our top-tier professionals to transform your concepts into impactful realities.
-          </p>
-          <Link href="/contact" className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-full shadow-md transition duration-300 ease-in-out mt-8 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-1">
-            Let's Connect
-          </Link>
-        </div>
-
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16 text-center">
-          <div className="bg-white rounded-lg shadow-md p-6">
-            <div className="text-3xl font-bold text-blue-600 mb-2">7500+</div>
-            <div className="text-sm text-gray-700 uppercase tracking-wide">Projects Completed</div>
-          </div>
-          <div className="bg-white rounded-lg shadow-md p-6">
-            <div className="text-3xl font-bold text-green-600 mb-2">3500+</div>
-            <div className="text-sm text-gray-700 uppercase tracking-wide">Satisfied Clients</div>
-          </div>
-          <div className="bg-white rounded-lg shadow-md p-6">
-            <div className="text-3xl font-bold text-indigo-600 mb-2">540+</div>
-            <div className="text-sm text-gray-700 uppercase tracking-wide">Talented Team Members</div>
-          </div>
-          <div className="bg-white rounded-lg shadow-md p-6">
-            <div className="text-3xl font-bold text-purple-600 mb-2">20+</div>
-            <div className="text-sm text-gray-700 uppercase tracking-wide">Years of Success</div>
-          </div>
-        </div>
-
-       
-        <div className="mb-16 text-center">
-          <h2 className="text-2xl font-semibold text-gray-900 mb-6">Our Expertise</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition duration-300 flex flex-col items-center">
-              <div className="w-12 h-12 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center mb-4">
-                <FaCode className="text-2xl" />
-              </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Web Development</h3>
-              <p className="text-sm text-gray-600 text-center">Crafting responsive and user-friendly web experiences.</p>
-            </div>
-            <div className="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition duration-300 flex flex-col items-center">
-              <div className="w-12 h-12 rounded-full bg-indigo-100 text-indigo-600 flex items-center justify-center mb-4">
-                <FaMobileAlt className="text-2xl" />
-              </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">App Development</h3>
-              <p className="text-sm text-gray-600 text-center">Building innovative mobile applications for iOS and Android.</p>
-            </div>
-            <div className="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition duration-300 flex flex-col items-center">
-              <div className="w-12 h-12 rounded-full bg-teal-100 text-teal-600 flex items-center justify-center mb-4">
-                <FaChartLine className="text-2xl" />
-              </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Digital Marketing</h3>
-              <p className="text-sm text-gray-600 text-center">Driving growth through strategic online marketing campaigns.</p>
-            </div>
-            <div className="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition duration-300 flex flex-col items-center">
-              <div className="w-12 h-12 rounded-full bg-orange-100 text-orange-600 flex items-center justify-center mb-4">
-                <FaShoppingCart className="text-2xl" />
-              </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">E-commerce Solutions</h3>
-              <p className="text-sm text-gray-600 text-center">Developing robust and scalable online stores.</p>
-            </div>
-            <div className="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition duration-300 flex flex-col items-center">
-              <div className="w-12 h-12 rounded-full bg-purple-100 text-purple-600 flex items-center justify-center mb-4">
-                <FaCloud className="text-2xl" />
-              </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Cloud Development</h3>
-              <p className="text-sm text-gray-600 text-center">Leveraging the cloud for scalable and reliable infrastructure.</p>
-            </div>
            
-          </div>
-        </div>
-
-    
-        <div className="bg-white rounded-lg shadow-md p-8">
-          <h2 className="text-2xl font-semibold text-gray-900 mb-6 text-center">Our Approach</h2>
-          <p className="text-lg text-gray-700 leading-relaxed mb-4">
-            At Reevan, we believe in a client-centric approach. We immerse ourselves in your
-            business to understand your unique challenges and goals. Our process involves:
-          </p>
-          <ul className="list-disc list-inside text-gray-600 leading-relaxed mb-6">
-            <li>Deep Dive Discovery & Analysis</li>
-            <li>Strategic Planning & Conceptualization</li>
-            <li>Agile Development & Execution</li>
-            <li>Rigorous Quality Assurance & Testing</li>
-            <li>Seamless Deployment & Integration</li>
-            <li>Ongoing Support & Evolution</li>
-          </ul>
-          <p className="text-gray-700 leading-relaxed text-center">
-            We are driven by innovation and committed to delivering solutions that not only meet
-            your current needs but also position you for future success.
-          </p>
-        </div>
-      </div>
-    </section> */}
             {/* <section className="py-16 bg-gray-50" > */}
             
             {/* <section className="py-16 bg-gradient-to-br from-blue-100 via-purple-100 to-violet-200"> */}
@@ -204,30 +111,7 @@ function AboutUsPage() {
                     </div>
 
 
-                    {/* Services */}
-                    {/* <div className="mb-16 text-center">
-          <h2 className="text-2xl font-semibold text-gray-900 mb-6 animate-fadeIn transition duration-700">Our Expertise</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              { icon: <FaCode className="text-2xl" />, title: 'Web Development', desc: 'Crafting responsive and user-friendly web experiences.', bg: 'bg-blue-100', text: 'text-blue-600' },
-              { icon: <FaMobileAlt className="text-2xl" />, title: 'App Development', desc: 'Building innovative mobile applications for iOS and Android.', bg: 'bg-indigo-100', text: 'text-indigo-600' },
-              { icon: <FaChartLine className="text-2xl" />, title: 'Digital Marketing', desc: 'Driving growth through strategic online marketing campaigns.', bg: 'bg-teal-100', text: 'text-teal-600' },
-              { icon: <FaShoppingCart className="text-2xl" />, title: 'E-commerce Solutions', desc: 'Developing robust and scalable online stores.', bg: 'bg-orange-100', text: 'text-orange-600' }
-            ].map((service, i) => (
-              <div
-                key={i}
-                className="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition-all transform duration-500 hover:scale-105 flex flex-col items-center opacity-0 animate-fadeIn"
-                style={{ animationDelay: `${i * 200}ms`, animationFillMode: 'forwards' }}
-              >
-                <div className={`w-12 h-12 rounded-full ${service.bg} ${service.text} flex items-center justify-center mb-4`}>
-                  {service.icon}
-                </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">{service.title}</h3>
-                <p className="text-sm text-gray-600 text-center">{service.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div> */}
+                   
                 </div>
             </section>
 
@@ -295,11 +179,19 @@ function AboutUsPage() {
 
                     {/* Image Section */}
                     <div className="w-full lg:w-1/2 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition duration-300 transform hover:scale-105">
-                        <img
+                        {/* <img
                             src="https://lh3.googleusercontent.com/proxy/1WDYp4qCQq1KR0XOwR31_w_qPXlrGqM4w7x2JL09mTf49U1sdOPG_7ynic2ZHxspk4-atSv77soyYvnrjyhW1E4tBrsiVC4zgmkbVL6debOJcMJM7pLE9ynQ72AQo1J2H3He" // Replace with actual image path
                             alt="Team collaboration"
                             className="w-full h-auto object-cover"
-                        />
+                        /> */}
+                        <Image
+    src="https://fellow.app/wp-content/uploads/2022/01/team-collaboration.jpg"
+    alt="Team collaboration"
+    width={800}
+    height={500}
+    className="w-full h-auto object-cover"
+/>
+
                     </div>
                 </div>
             </section>
