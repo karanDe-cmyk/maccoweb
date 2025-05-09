@@ -59,7 +59,7 @@ function Careers() {
       className="bg-cover bg-center"
       style={{
         backgroundImage:
-          "url('https://images.sw.cdn.siemens.com/siemens-disw-assets/public/7x85Fa0whDvfMlnsHmEFVM/en-US/careers-is677807458-gradient-hero-1920x1080.jpg?auto=format,compress&w=1920&q=60')",
+          "url('/careerbanner.avif')",
       }}
     >
       {/* बैकग्राउंड इमेज */}

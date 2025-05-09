@@ -1,7 +1,6 @@
 'use client';
 import React from 'react';
 import Navbar from '../Component/Navbar/page';
-
 import Link from 'next/link';
 import CountUp from 'react-countup';
 import Image from 'next/image';
@@ -9,7 +8,6 @@ import { FaUsers, FaCode, FaChartLine, FaShoppingCart, FaCloud, FaMobileAlt } fr
 import OurValuesSection from '../Component/OurValuesSection/page';
 import TransparencyEthics from '../Component/TransparencyEthics/page';
 import Footerpage from '../Component/Footerpage/page';
-
 
 function AboutUsPage() {
     return (
@@ -19,7 +17,7 @@ function AboutUsPage() {
             <section
                 className="w-full min-h-[60vh] bg-cover bg-center flex items-center justify-center"
                 style={{
-                    backgroundImage: "url('https://www.shutterstock.com/image-photo/using-laptop-show-icon-address-600nw-2521386695.jpg')",
+                    backgroundImage: "url('/aboutus.jpeg')",
                 }}
             >
                 <h1 className="text-white text-4xl md:text-5xl font-semibold drop-shadow-lg mt-[310px]">
@@ -29,7 +27,6 @@ function AboutUsPage() {
 
             <section className="py-16 bg-white-50">
                 <div className=" mx-auto px-6 md:px-12 lg:px-24 flex flex-col lg:flex-row items-center justify-between gap-12">
-                    {/* Text Section */}
                     <div className="w-full lg:w-1/2 text-center lg:text-left">
                         <span className="text-indigo-600 font-semibold uppercase tracking-wider mb-4 block">
                             WHO WE ARE
@@ -45,31 +42,20 @@ function AboutUsPage() {
                         </p>
                     </div>
 
-                    {/* Image Section */}
                     <div className="w-full lg:w-1/2 rounded-lg overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-300">
-                        {/* <img
-                            src="https://www.gavinwillis.co.uk/wp-content/uploads/2017/03/five_reasons_blog.jpeg" // Replace with actual image path
-                            alt="Our team collaborating"
-                            className="w-full h-auto object-cover"
-                        /> */}
                         <Image
-              src="https://www.gavinwillis.co.uk/wp-content/uploads/2017/03/five_reasons_blog.jpeg"
-              alt="Our team collaborating"
-              width={800}
-              height={500}
-              className="w-full h-auto object-cover"
-            />
+                            src="/aboutus2.webp"
+                            alt="Our team collaborating"
+                            width={800}
+                            height={500}
+                            className="w-full h-auto object-cover"
+                        />
                     </div>
                 </div>
             </section>
 
-           
-            {/* <section className="py-16 bg-gray-50" > */}
-            
-            {/* <section className="py-16 bg-gradient-to-br from-blue-100 via-purple-100 to-violet-200"> */}
             <section className="py-16 bg-[#FEEFEF]">
                 <div className="container mx-auto px-6 md:px-8 lg:px-12 xl:px-16">
-                    {/* Introduction */}
                     <div className="text-center mb-12 animate-fadeIn transition-opacity duration-1000 ease-in-out">
                         <h2 className="font-bold text-gray-700 sm:text-3xl lg:text-3xl mb-4 transform transition-transform duration-500 hover:scale-105">
                             The Reevan - Your Digital Growth Partner
@@ -83,12 +69,10 @@ function AboutUsPage() {
                             href="/contact"
                             className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-full shadow-md transition duration-300 ease-in-out mt-8 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-1 transform hover:scale-105"
                         >
-                            Let's Connect
+                            Let&apos;s Connect
                         </Link>
                     </div>
 
-                    {/* Key Metrics */}
-                    {/* Key Metrics */}
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16 text-center">
                         {[
                             { value: 3500, label: 'Projects Completed', color: 'text-blue-600' },
@@ -109,13 +93,9 @@ function AboutUsPage() {
                             </div>
                         ))}
                     </div>
-
-
-                   
                 </div>
             </section>
 
-            {/* <section className='py-16 bg-gradient-to-br from-gray-100  to-white-200'> */}
             <section className='py-16 bg-white'>
                 <div className="mb-16 text-center px-[90px]">
                     <h2 className="text-2xl font-semibold text-gray-900 mb-6 animate-fadeIn transition duration-700">Our Expertise</h2>
@@ -143,28 +123,16 @@ function AboutUsPage() {
             </section>
 
             <OurValuesSection />
-
-
-
-            {/* -----fourth section start */}
-
             <TransparencyEthics />
-            {/* -----fourth section end */}
 
-
-            {/* ------fifth section start-------- */}
-            {/* <section className="bg-gradient-to-br from-indigo-100 to-purple-100 py-20 px-6 md:px-12 lg:px-24"> */}
             <section className="bg-[#FEEFEF] py-20 px-6 md:px-12 lg:px-24">
                 <div className="max-w-7xl mx-auto flex flex-col-reverse lg:flex-row items-center gap-16">
-                    {/* Text Section */}
                     <div className="w-full lg:w-1/2 text-center lg:text-left">
                         <p className="text-blue-600 font-semibold uppercase tracking-wide mb-4">
                             Together We Achieve
                         </p>
-                        <h2 className=" md:text-2xl font-extrabold text-gray-800  mb-6">
-                            <span className="inline-block border-b-4 border-blue-400 pb-2">
-                                Teamwork
-                            </span>{" "}
+                        <h2 className="md:text-2xl font-extrabold text-gray-800 mb-6">
+                            <span className="inline-block border-b-4 border-blue-400 pb-2">Teamwork</span>{" "}
                             is the ability to work together toward a common vision.
                         </h2>
                         <p className="text-lg text-gray-700 mb-8">
@@ -177,26 +145,19 @@ function AboutUsPage() {
                         </button>
                     </div>
 
-                    {/* Image Section */}
-                    <div className="w-full lg:w-1/2 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition duration-300 transform hover:scale-105">
-                        {/* <img
-                            src="https://lh3.googleusercontent.com/proxy/1WDYp4qCQq1KR0XOwR31_w_qPXlrGqM4w7x2JL09mTf49U1sdOPG_7ynic2ZHxspk4-atSv77soyYvnrjyhW1E4tBrsiVC4zgmkbVL6debOJcMJM7pLE9ynQ72AQo1J2H3He" // Replace with actual image path
-                            alt="Team collaboration"
-                            className="w-full h-auto object-cover"
-                        /> */}
+                    <div className="w-full lg:w-1/2 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300">
                         <Image
-    src="https://fellow.app/wp-content/uploads/2022/01/team-collaboration.jpg"
-    alt="Team collaboration"
-    width={800}
-    height={500}
-    className="w-full h-auto object-cover"
-/>
-
+                            src="/aboutus2.webp"
+                            alt="Join our team"
+                            width={800}
+                            height={500}
+                            className="w-full h-auto object-cover"
+                        />
                     </div>
                 </div>
             </section>
-            {/* ---fifth section end */}
-            <Footerpage/>
+
+            <Footerpage />
         </>
     );
 }

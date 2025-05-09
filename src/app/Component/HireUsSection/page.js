@@ -1,5 +1,8 @@
+"use client";
+
+import React from "react";
 import { motion } from "framer-motion";
-import { HiCheckBadge } from "react-icons/hi2";
+import { HiBadgeCheck } from "react-icons/hi"; // Make sure this icon exists in your installed version
 
 const HireUsSection = () => {
   const reasons = [
@@ -14,7 +17,7 @@ const HireUsSection = () => {
   return (
     <section className="bg-gray-50 py-16">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-2xl sm:text-3xl font-bold text-black-700 text-center mb-12">
+        <h2 className="text-2xl sm:text-3xl font-bold text-black text-center mb-12">
           Top Reasons To Hire Us For iOS App Development
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -28,7 +31,7 @@ const HireUsSection = () => {
               className="flex items-start bg-white shadow-md p-6 rounded-xl hover:shadow-lg transition-shadow duration-300"
             >
               <div className="h-8 w-8 rounded-full bg-green-100 flex items-center justify-center mr-4">
-                <HiCheckBadge className="text-green-600 text-xl" />
+                <HiBadgeCheck className="text-green-600 text-xl" />
               </div>
               <p className="text-gray-700">{reason}</p>
             </motion.div>

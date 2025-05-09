@@ -61,8 +61,9 @@ const DevelopmentServices = () => {
           Development services across multiple <span className="text-indigo-600">industries</span>
         </h2>
         <p className="text-gray-700 text-center mb-8">
-          We've built expert knowledge in a range of industries.
-        </p>
+  We&apos;ve built expert knowledge in a range of industries.
+</p>
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {industries.map((industry, index) => (
             <IndustryCard key={index} {...industry} />

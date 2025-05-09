@@ -68,7 +68,7 @@ function ReactNative() {
           className="absolute bg-cover bg-center bg-no-repeat top-0 left-0 w-full h-full opacity-20"
           style={{
             backgroundImage:
-              "url(https://cdn.moontechnolabs.com/live/images/services/react_native_banner_new.webp)",
+              "url(/react_native_banner_new.webp)",
             backgroundSize: "cover",
             backgroundRepeat: "repeat",
           }}
@@ -115,7 +115,7 @@ function ReactNative() {
             className="rounded-lg shadow-lg w-full h-auto"
           /> */}
               <Image
-                src="https://viitorcloud.com/blog/wp-content/uploads/2022/06/React-Native-Framework-for-Mobile-App-Development.jpg"
+                src="/reactnative2.jpg"
                 alt="React Native App Development Illustration"
                 width={600} // Approx width
                 height={400} // Approx height
@@ -142,7 +142,7 @@ function ReactNative() {
               className="rounded-lg shadow-lg w-full h-auto"
             /> */}
               <Image
-                src="http://127.0.0.1:5500/images/react-benefit.webp"
+                src="/reactnative.jpg"
                 alt="Why Choose React Native"
                 width={600}
                 height={400}

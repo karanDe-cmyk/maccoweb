@@ -516,7 +516,7 @@ export default function Navbar() {
           <div className="flex-shrink-0">
             <h1 className="text-3xl font-bold text-purple-700 transition-all hover:text-purple-500">
               <motion.img
-                src='https://maccotech.in/images/logo.png'
+                src='/maccotechlogo.jpg'
                 alt="MaccoTech Logo"
                 className="h-13 w-auto"
                 animate={{ scale: [1, 1.2, 1] }}

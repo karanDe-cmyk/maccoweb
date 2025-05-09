@@ -32,11 +32,7 @@ const Footerpage = () => {
                     +91 123 4567 890
                   </a>
                 </li>
-                <li>
-                  <a href="#" className="flex items-center hover:text-blue-400 transition-colors">
-                    <FaPinterest className="w-4 h-4 mr-2" />
-                  </a>
-                </li>
+               
                 <li>
                   <a href="https://wa.me/+911234567890" target="_blank" rel="noopener noreferrer" className="flex items-center hover:text-green-400 transition-colors">
                     <FaWhatsapp size={24} />
@@ -55,12 +51,7 @@ const Footerpage = () => {
                     info@reevan.com
                   </a>
                 </li>
-                <li>
-                  <a href="skype:reevan.company?call" className="flex items-center hover:text-blue-600 transition-colors">
-                    <FaSkype size={24} />
-                    reevan-skype
-                  </a>
-                </li>
+               
               </ul>
             </div>
 
@@ -149,9 +140,18 @@ const Footerpage = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 items-center gap-8 w-full"> {/* Ensured full width */}
             {/* Logo and Rating */}
             <div className="space-y-4 w-full"> {/* Ensured full width */}
-              <div className="flex items-center">
-                <img src="/images/footer-logo.png" alt="reeven" className="h-auto" style={{ maxWidth: '100%' }} /> {/* Added maxWidth for responsiveness */}
-              </div>
+             <div className="flex items-left justify-left">
+  <div className="w-full max-w-xs">
+    <Image 
+      src="/maccotechlogo.jpg" 
+      alt="Reeven" 
+      width={300} // You can adjust the width here
+      height={150} // Adjust height based on the aspect ratio
+      layout="responsive" // Ensures the image scales appropriately
+      className="rounded-lg shadow-lg" // Add styling like rounded corners and shadow
+    />
+  </div>
+</div>
               <div className="flex items-center">
                 <Star className="w-4 h-4 text-yellow-400" />
                 <Star className="w-4 h-4 text-yellow-400" />
@@ -163,12 +163,23 @@ const Footerpage = () => {
             </div>
 
             {/* Partner Logos */}
-            <div className="flex flex-wrap justify-center gap-6 w-full"> {/* Ensured full width */}
-              <a href="#"><img src="https://maccotech.in/images/brand-logo/appfutura_320x320.png" alt="Logo" className="h-17" style={{ maxWidth: '100%' }} /></a>
-              <a href="#"><img src="https://maccotech.in/images/brand-logo/clutch_320x320.png" alt="Logo" className="h-17" style={{ maxWidth: '100%' }} /></a>
-              <a href="#"><img src="https://maccotech.in/images/brand-logo/goodfirmslogo_320x320.png" alt="Logo" className="h-17" style={{ maxWidth: '100%' }} /></a>
-              <a href="#"><img src="https://maccotech.in/images/brand-logo/itfirms_circular_320x320.png" alt="Logo" className="h-17" style={{ maxWidth: '100%' }} /></a>
-            </div>
+          
+            <div className="flex flex-wrap justify-center gap-4 w-full">
+  <a href="#" className="flex-shrink-0">
+    <Image src="/appfutura.png" alt="AppFutura Logo" width={100} height={56} />
+  </a>
+  <a href="#" className="flex-shrink-0">
+    <Image src="/goodfirmslogo.png" alt="GoodFirms Logo" width={100} height={56} />
+  </a>
+  <a href="#" className="flex-shrink-0">
+    <Image src="/clutch.png" alt="Clutch Logo" width={100} height={56} />
+  </a>
+  <a href="#" className="flex-shrink-0">
+    <Image src="/itfirms.png" alt="ITFirms Logo" width={100} height={56} />
+  </a>
+</div>
+
+
 
             {/* Brochure Button */}
             <div className="flex justify-center w-full"> {/* Ensured full width */}
@@ -204,3 +215,5 @@ const Footerpage = () => {
 };
 
 export default Footerpage;
+
+

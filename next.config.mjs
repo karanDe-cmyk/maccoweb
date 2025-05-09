@@ -57,45 +57,86 @@
   
 //   export default nextConfig;
   
-/** @type {import('next').NextConfig} */
+// /** @type {import('next').NextConfig} */
+// const nextConfig = {
+//     images: {
+//       domains: [
+//         '127.0.0.1',
+//         'localhost',
+//         'viitorcloud.com',
+//         'cdn.moontechnolabs.com',
+//         'images.unsplash.com',
+//         'cdn.pixabay.com',
+//         'res.cloudinary.com',
+//         'via.placeholder.com',
+//         'placehold.it',
+//         'dummyimage.com',
+//         'img.freepik.com',
+//         'static.vecteezy.com',
+//         'media.istockphoto.com',
+//         'cdn.dribbble.com',
+//         'assets-global.website-files.com',
+//         'static.wixstatic.com',
+//         'images.ctfassets.net',
+//         'lh3.googleusercontent.com',
+//         'firebasestorage.googleapis.com',
+//         's3.amazonaws.com',
+//         'www.elsner.com',
+//         'www.techasoft.com',
+//         'encrypted-tbn0.gstatic.com', // ✅ This is the important one
+//         'nyusoft.com',
+//         'www.strivemindz.com',
+//         'www.profound.digital',
+//         'askgalore.com',
+//         'www.minddigital.com',
+//         'www.groovyweb.co',
+//         'www.gavinwillis.co.uk',
+//         'lh3.googleusercontent.com',
+//         'fellow.app'
+//       ],
+//     },
+//   };
+  
+//   export default nextConfig;
+  /** @type {import('next').NextConfig} */
 const nextConfig = {
-    images: {
-      domains: [
-        '127.0.0.1',
-        'localhost',
-        'viitorcloud.com',
-        'cdn.moontechnolabs.com',
-        'images.unsplash.com',
-        'cdn.pixabay.com',
-        'res.cloudinary.com',
-        'via.placeholder.com',
-        'placehold.it',
-        'dummyimage.com',
-        'img.freepik.com',
-        'static.vecteezy.com',
-        'media.istockphoto.com',
-        'cdn.dribbble.com',
-        'assets-global.website-files.com',
-        'static.wixstatic.com',
-        'images.ctfassets.net',
-        'lh3.googleusercontent.com',
-        'firebasestorage.googleapis.com',
-        's3.amazonaws.com',
-        'www.elsner.com',
-        'www.techasoft.com',
-        'encrypted-tbn0.gstatic.com', // ✅ This is the important one
-        'nyusoft.com',
-        'www.strivemindz.com',
-        'www.profound.digital',
-        'askgalore.com',
-        'www.minddigital.com',
-        'www.groovyweb.co',
-        'www.gavinwillis.co.uk',
-        'lh3.googleusercontent.com',
-        'fellow.app'
-      ],
-    },
-  };
-  
-  export default nextConfig;
-  
+  images: {
+    domains: [
+      '127.0.0.1',
+      'localhost',
+      'viitorcloud.com',
+      'cdn.moontechnolabs.com',
+      'images.unsplash.com',
+      'cdn.pixabay.com',
+      'res.cloudinary.com',
+      'via.placeholder.com',
+      'placehold.it',
+      'dummyimage.com',
+      'img.freepik.com',
+      'static.vecteezy.com',
+      'media.istockphoto.com',
+      'cdn.dribbble.com',
+      'assets-global.website-files.com',
+      'static.wixstatic.com',
+      'images.ctfassets.net',
+      'lh3.googleusercontent.com',
+      'firebasestorage.googleapis.com',
+      's3.amazonaws.com',
+      'www.elsner.com',
+      'www.techasoft.com',
+      'encrypted-tbn0.gstatic.com',
+      'nyusoft.com',
+      'www.strivemindz.com',
+      'www.profound.digital',
+      'askgalore.com',
+      'www.minddigital.com',
+      'www.groovyweb.co',
+      'www.gavinwillis.co.uk',
+      'lh3.googleusercontent.com',
+      'fellow.app',
+      'cdn-icons-png.flaticon.com' // ✅ Add this line
+    ],
+  },
+};
+
+export default nextConfig;

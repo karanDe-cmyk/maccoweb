@@ -1,6 +1,7 @@
 
 
 
+
 // 'use client';
 // import React from "react";
 // import { motion } from "framer-motion";
@@ -51,63 +52,60 @@
 
 // const ReactServiceCard = () => {
 //   return (
-//     <section className="px-4 py-16 max-w-7xl mx-auto bg-[#FEEFEF]  border border-gray-50 rounded-[30px] mb-6">
-//      {/* <section className="bg-[#FEEFEF] py-24 mx-auto md:py-32 lg:py-48 relative overflow-hidden  max-w-7xl"> */}
-//       <div className="text-center mb-5 ">
-//         <h2 className="text-4xl font-bold text-gray-800 mb-4">
-//           Scalable React Native Solutions for Startups & Enterprises
-//         </h2>
-//         <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-//           Macco Tech helps businesses build modern, cross-platform mobile apps using React Native – fast, flexible, and efficient.
-//         </p>
-//       </div>
+//     <section className="py-16 bg-[#FEEFEF]">
+//       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+//         <div className="text-center mb-12">
+//           <h2 className="text-4xl font-bold text-gray-800 mb-4">
+//             Scalable React Native Solutions for Startups & Enterprises
+//           </h2>
+//           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+//             Macco Tech helps businesses build modern, cross-platform mobile apps using React Native – fast, flexible, and efficient.
+//           </p>
+//         </div>
 
-//       <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 pl-20 pr-20">
-//         {services.map((service, index) => (
-//           <motion.div
-//             key={index}
-//             className={`rounded-2xl p-6 border bg-white shadow-lg hover:shadow-xl transition-all duration-300 ${
-//               service.highlight ? "border-blue-500" : "border-gray-300"
-//             }`}
-//             variants={cardVariants}
-//             initial="hidden"
-//             whileInView="visible"
-//             viewport={{ once: true }}
-//             transition={{ duration: 0.4, delay: index * 0.15 }}
-//           >
-//             <div className="mb-6 text-center">
-//               {service.iconType === "image" ? (
-//                 <img
-//                   src={service.icon}
-//                   alt={service.title}
-//                   className="w-16 h-16 mx-auto grayscale hover:grayscale-0 transition duration-300"
-//                 />
-//               ) : (
-//                 <span className="text-5xl">
-//                   {service.icon}
-//                 </span>
-//               )}
-//             </div>
-//             <h3 className="text-xl font-semibold mb-3 text-center text-gray-800">
-//               {service.title}
-//             </h3>
-//             <p className="text-sm text-gray-600 leading-relaxed text-center">
-//               {service.description}
-//             </p>
-//           </motion.div>
-//         ))}
+//         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+//           {services.map((service, index) => (
+//             <motion.div
+//               key={index}
+//               className={`rounded-2xl p-6 border bg-white shadow-lg hover:shadow-xl transition-all duration-300 ${
+//                 service.highlight ? "border-blue-500" : "border-gray-300"
+//               }`}
+//               variants={cardVariants}
+//               initial="hidden"
+//               whileInView="visible"
+//               viewport={{ once: true }}
+//               transition={{ duration: 0.4, delay: index * 0.15 }}
+//             >
+//               <div className="mb-6 text-center">
+//                 {service.iconType === "image" ? (
+//                   <img
+//                     src={service.icon}
+//                     alt={service.title}
+//                     className="w-16 h-16 mx-auto grayscale hover:grayscale-0 transition duration-300"
+//                   />
+//                 ) : (
+//                   <span className="text-5xl">{service.icon}</span>
+//                 )}
+//               </div>
+//               <h3 className="text-xl font-semibold mb-3 text-center text-gray-800">
+//                 {service.title}
+//               </h3>
+//               <p className="text-sm text-gray-600 leading-relaxed text-center">
+//                 {service.description}
+//               </p>
+//             </motion.div>
+//           ))}
+//         </div>
 //       </div>
 //     </section>
 //   );
 // };
 
 // export default ReactServiceCard;
-
-
-
 'use client';
 import React from "react";
 import { motion } from "framer-motion";
+import Image from 'next/image'; // Import Image from next/image
 
 const services = [
   {
@@ -170,9 +168,7 @@ const ReactServiceCard = () => {
           {services.map((service, index) => (
             <motion.div
               key={index}
-              className={`rounded-2xl p-6 border bg-white shadow-lg hover:shadow-xl transition-all duration-300 ${
-                service.highlight ? "border-blue-500" : "border-gray-300"
-              }`}
+              className={`rounded-2xl p-6 border bg-white shadow-lg hover:shadow-xl transition-all duration-300 ${service.highlight ? "border-blue-500" : "border-gray-300"}`}
               variants={cardVariants}
               initial="hidden"
               whileInView="visible"
@@ -181,10 +177,12 @@ const ReactServiceCard = () => {
             >
               <div className="mb-6 text-center">
                 {service.iconType === "image" ? (
-                  <img
+                  <Image
                     src={service.icon}
                     alt={service.title}
                     className="w-16 h-16 mx-auto grayscale hover:grayscale-0 transition duration-300"
+                    width={64} // Specify width
+                    height={64} // Specify height
                   />
                 ) : (
                   <span className="text-5xl">{service.icon}</span>

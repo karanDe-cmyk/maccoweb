@@ -20,7 +20,7 @@ const ShopifyBenefits = () => {
         <div className="w-full h-auto">
           <div className="relative w-full h-96 rounded-lg overflow-hidden shadow-md">
             <Image
-              src="https://www.profound.digital/wp-content/uploads/2022/12/development-team-working.jpg"
+              src="/development-team-working.jpg"
               alt="eCommerce team planning"
               fill
               className="object-cover"

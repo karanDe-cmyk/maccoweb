@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 const ResultsSection = () => {
   const resultsData = [
@@ -10,28 +11,28 @@ const ResultsSection = () => {
       description: 'Improved lead conversion rates by streamlining the sales funnel and driving quality traffic.',
       bgColor: 'bg-purple-100',
       textColor: 'text-purple-700',
-      imageSrc: 'https://maccotech.in/images/icons/sales-funnel.svg',
+      imageSrc: '/sales-funnel1.svg',
     },
     {
       percentage: 150,
       description: 'Achieved significant revenue growth through strategic financial planning and performance marketing.',
       bgColor: 'bg-orange-100',
       textColor: 'text-orange-700',
-      imageSrc: 'https://maccotech.in/images/icons/financial-profit.svg',
+      imageSrc: '/bar-graph.svg',
     },
     {
       percentage: 200,
       description: 'Enhanced overall business performance with data-driven strategies and growth-focused solutions.',
       bgColor: 'bg-yellow-100',
       textColor: 'text-yellow-700',
-      imageSrc: 'https://maccotech.in/images/icons/bar-graph.svg',
+      imageSrc: '/financial-profit.svg',
     },
     {
       percentage: 300,
       description: 'Amplified brand reach and customer engagement with targeted marketing campaigns.',
       bgColor: 'bg-pink-100',
       textColor: 'text-pink-700',
-      imageSrc: 'https://maccotech.in/images/icons/promotion.svg',
+      imageSrc: '/promotion.svg',
     },
   ];
 
@@ -42,11 +43,11 @@ const ResultsSection = () => {
     useEffect(() => {
       const interval = setInterval(() => {
         setCount((prev) => {
-          if (prev < target) return prev + 3; // Adjust step size for speed
-          clearInterval(interval); // Stop counting when target is reached
+          if (prev < target) return prev + 3;
+          clearInterval(interval);
           return target;
         });
-      }, 20); // Update every 20ms
+      }, 20);
       return () => clearInterval(interval);
     }, [target]);
 
@@ -59,7 +60,6 @@ const ResultsSection = () => {
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.6 }}
       viewport={{ once: true }}
-    //    className="bg-gradient-to-t from-[#fad0c4] to-[#ffd1ff] py-20"
       className="bg-white py-20"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -88,8 +88,13 @@ const ResultsSection = () => {
               viewport={{ once: true }}
               className={`group p-6 rounded-2xl border border-gray-100 hover:shadow-xl transition-all duration-300 ${result.bgColor}`}
             >
-              <div className="w-14 h-14 bg-white rounded-full flex items-center justify-center shadow-md mb-4">
-                <img src={result.imageSrc} alt="Result Icon" className="w-6 h-6" />
+              <div className="w-14 h-14 bg-white rounded-full flex items-center justify-center shadow-md mb-4 relative">
+                <Image
+                  src={result.imageSrc}
+                  alt="Result Icon"
+                  width={24}
+                  height={24}
+                />
               </div>
               <h3 className={`text-3xl font-semibold ${result.textColor}`}>
                 <CountUp target={result.percentage} />

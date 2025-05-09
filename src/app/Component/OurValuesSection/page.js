@@ -1,3 +1,4 @@
+"use client"
 import React, { useState } from 'react';
 import { FaBullseye, FaEye, FaHeart, FaHandshake } from 'react-icons/fa';
 import { motion } from 'framer-motion';

@@ -1,6 +1,6 @@
-"use client";
-
+"use client"
 import React, { useState, useEffect } from 'react';
+import Image from 'next/image'; // Import the Image component
 
 const JobCard = ({ title, experience, location, type, daysAgo, index }) => {
   const [isVisible, setIsVisible] = useState(false);
@@ -8,7 +8,7 @@ const JobCard = ({ title, experience, location, type, daysAgo, index }) => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsVisible(true);
-    }, index * 150); // Delay bhi thoda badha dete hain
+    }, index * 150);
 
     return () => clearTimeout(timer);
   }, [index]);
@@ -46,7 +46,6 @@ const OurOpenings = () => {
   ];
 
   return (
-    // <div className="bg-gray-100 py-16">
     <div className="bg-white py-16">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-8 flex items-center justify-between">
@@ -54,10 +53,13 @@ const OurOpenings = () => {
             <h2 className="text-3xl font-bold text-gray-900 mb-2">Our Openings</h2>
             <div className="w-16 h-1 bg-orange-500 rounded-full"></div>
           </div>
-          <img
-            src="https://media.istockphoto.com/id/2052068199/vector/creative-welcome-to-the-team-banner-for-your-recruitment-process.jpg?s=612x612&w=0&k=20&c=UN9zYHy_PaW8aV6V020w2gjlBgDWrs98XTk0IT1uTA0="
+          {/* Replaced <img> with <Image /> */}
+          <Image
+            src="/stock.jpg"
             alt="Welcome to the team"
             className="hidden sm:block h-16"
+            width={64} // Define width and height
+            height={64} // Define width and height
           />
         </div>
         <p className="text-gray-700 mb-8">
@@ -65,27 +67,7 @@ const OurOpenings = () => {
         </p>
         <div className="mb-8 flex items-center">
           <div className="relative flex-grow">
-            {/* <input
-              type="text"
-              placeholder="Search job title"
-              className="w-full pl-4 pr-10 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
-            />
-            <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
-              <svg
-                className="h-5 w-5 text-gray-400"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                />
-              </svg>
-            </div> */}
+            {/* Other content */}
           </div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

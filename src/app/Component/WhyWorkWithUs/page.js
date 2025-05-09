@@ -6,7 +6,8 @@ const WhyWorkWithUs = () => {
   return (
     <section className=" py-16 px-4 md:px-12 lg:px-24 text-black">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-3xl font-bold mb-4">It's worth</h2>
+      <h2 className="text-3xl font-bold mb-4">It&apos;s worth</h2>
+
         <h2 className="text-3xl font-bold text-black mb-10">working with us</h2>
 
         <div className="grid gap-6 md:grid-cols-2">

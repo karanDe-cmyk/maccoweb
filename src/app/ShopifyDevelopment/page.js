@@ -16,7 +16,7 @@ function ShopifyDevelopment() {
       <div
         className="relative bg-gray-900 h-[70vh] sm:h-[70vh]"
         style={{
-          backgroundImage: `url('https://www.techasoft.com/uploads/SHOPIFY_DEVELOPMENT_COMPANY_IN_BANGALORE8.jpg')`,
+          backgroundImage: `url('/SHOPIFY_DEVELOPMENT_COMPANY_IN_BANGALORE8.jpg')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
@@ -94,7 +94,7 @@ function ShopifyDevelopment() {
             transition={{ duration: 0.8, ease: 'easeOut' }}  // Animation properties
           >
             <Image
-              src="https://nyusoft.com/wp-content/themes/twentytwentyone-child/images/services/Shopify-Development/shopify-dev-img.png"
+              src="/shopify-dev-img.png"
               alt="Shopify Website Development"
               width={500}
               height={300}
@@ -131,7 +131,7 @@ function ShopifyDevelopment() {
         <div className="flex justify-center">
   <div className="relative w-48 h-60 md:w-60 md:h-72">
     <Image
-      src="https://www.strivemindz.com/images/offerings/mobile/shopify-development.png"
+      src="/shopify-dev-img.png"
       alt="Shopify Illustration"
       fill // this makes the image cover the entire parent container
       className="object-contain rounded-lg shadow-md"
