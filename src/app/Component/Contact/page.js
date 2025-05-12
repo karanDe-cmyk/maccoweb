@@ -305,7 +305,7 @@ const ContactForm = () => {
                     </Typography>
                     <Typography variant="subtitle1" className="opacity-90 pt-3 text-base">
                       Our friendly team is ready to answer your questions and discuss your project.
-                      Need help? Feel free to contact us and we'll respond as soon as possible.
+                      Need help? Feel free to contact us and we&apos;sll respond as soon as possible.
                     </Typography>
 
                     <div className="space-y-3 text-base mt-10"> {/* Increased spacing and font size */}
@@ -410,9 +410,10 @@ const ContactForm = () => {
                     }}
                     className="space-y-6"
                   >
-                    <Typography variant="h6" gutterBottom className="text-gray-700 font-semibold text-lg">
-                      Let’s Discuss Your Project
-                    </Typography>
+                   <Typography variant="h6" gutterBottom className="text-gray-700 font-semibold text-lg">
+  Let&apos;s Discuss Your Project
+</Typography>
+
 
                     <div className="grid md:grid-cols-2 gap-6 mt-6">
                       <TextField label="Enter Name" variant="standard" placeholder="Full Name *" fullWidth required />
@@ -421,28 +422,7 @@ const ContactForm = () => {
 
                     <div className="grid md:grid-cols-2 gap-6 ">
                       <TextField label="Contact Number" variant="standard" placeholder="Contact Number *" fullWidth required />
-                      {/* <TextField
-                        label="Interested in"
-                        variant="standard"
-                        required
-                        select
-                        fullWidth
-                        defaultValue=""
-                        className='px-9'
                       
-                      >
-                        {[
-                          'Website Development',
-                          'App Development',
-                          'Digital Marketing',
-                          'UI/UX Design',
-                          'Other',
-                        ].map((option) => (
-                          <option key={option} value={option}>
-                            {option}
-                          </option>
-                        ))}
-                      </TextField> */}
                       <TextField
   label="Interested in"
   variant="standard"

@@ -16,7 +16,7 @@ import LifeAtMacco from '../Component/LifeAtMcco/page';
 import Banner from '../Component/Banner/page';
 import { motion } from "framer-motion";
 
-
+import Image from 'next/image';
 
 function Careers() {
 
@@ -139,14 +139,16 @@ function Careers() {
         {/* reCAPTCHA */}
         <div className="bg-white max-w-[270px] border border-gray rounded-md flex items-center px-4 py-3 text-white">
           <input type="checkbox" className="mr-2" />
-          <label className="text-black text-sm">I'm not a robot</label>
+          <label className="text-black text-sm">I&apos;m not a robot</label>
+
           <div className="ml-18">
-            <img
-              // src="https://www.gstatic.com/recaptcha/api2/logo_48.png"
-              src="/recapcha.png"
-              alt="reCAPTCHA"
-              className="w-8 h-8"
-            />
+          <Image
+  src="/recapcha.png"
+  alt="reCAPTCHA"
+  width={32}
+  height={32}
+  className="w-8 h-8"
+/>
           </div>
         </div>
 
