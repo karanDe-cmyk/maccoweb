@@ -20,7 +20,7 @@ export default function Navbar() {
           <div className="flex items-center mt-10 justify-left">
             <motion.h1 className="flex-shrink-0 mr-4">
               <motion.img
-                src='/Maccotech4.png'
+                src='/Maccotech1-removebg-preview.png'
                 alt="MaccoTech Logo"
                 className="h-15 w-auto"
                 animate={{ scale: [1, 1.2, 1] }}

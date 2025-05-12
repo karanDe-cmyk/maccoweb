@@ -34,7 +34,7 @@ export default function Home() {
               <div className="flex items-center mb-4">
                 <div className="mr-2">
                   <Image
-                    src="/Maccotech4.PNG"
+                    src="/Maccotech1-removebg-preview.png"
                     alt="Macco Tech Logo"
                     width={50}
                     height={50}
