@@ -1,12 +1,9 @@
-import React from 'react'
+import Home1 from "./home/page";
 
-const index = () => {
+export default function Home() {
   return (
     <div>
-      
-      <h1 className='home'> Home page</h1>
+      <Home1 />
     </div>
-  )
+  );
 }
-
-export default index

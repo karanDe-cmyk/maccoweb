@@ -8,22 +8,40 @@ import { FaUsers, FaCode, FaChartLine, FaShoppingCart, FaCloud, FaMobileAlt } fr
 import OurValuesSection from '../Component/OurValuesSection/page';
 import TransparencyEthics from '../Component/TransparencyEthics/page';
 import Footerpage from '../Component/Footerpage/page';
-
+import { useEffect, useState } from 'react';
 function AboutUsPage() {
+    const [isVisible, setIsVisible] = useState(false);
+
+    useEffect(() => {
+        const timeout = setTimeout(() => {
+            setIsVisible(true);
+        }, 100); // slight delay
+        return () => clearTimeout(timeout);
+    }, []);
     return (
+       
         <>
             <Navbar />
 
             <section
-                className="w-full min-h-[60vh] bg-cover bg-center flex items-center justify-center"
-                style={{
-                    backgroundImage: "url('/aboutus.jpeg')",
-                }}
+            className="w-full min-h-[60vh] bg-cover bg-center flex items-center justify-center"
+            style={{
+                backgroundImage: "url('/Aboutus.jpg')",
+            }}
+        >
+            <div
+                className={`flex flex-col items-center text-center gap-4 px-4 transition-all duration-1000 transform ${
+                    isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-90'
+                }`}
             >
-                <h1 className="text-white text-4xl md:text-5xl font-semibold drop-shadow-lg mt-[310px]">
-                    About us
+                <h1 className="text-white text-4xl md:text-5xl font-semibold drop-shadow-lg">
+                    GLIMPSE OF WHO WE ARE
                 </h1>
-            </section>
+                <h2 className="text-white text-lg md:text-xl max-w-3xl">
+                    Our Services section is enriched with highly informative articles on software development & mobile application technologies. Keep reading!
+                </h2>
+            </div>
+        </section>
 
             <section className="py-16 bg-white-50">
                 <div className=" mx-auto px-6 md:px-12 lg:px-24 flex flex-col lg:flex-row items-center justify-between gap-12">

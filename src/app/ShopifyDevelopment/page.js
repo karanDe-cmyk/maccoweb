@@ -3,10 +3,10 @@ import React from 'react';
 import Navbar from '../Component/Navbar/page';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import WhyMaccoTechShopify from '../Component/WhyMaccoTechShopify/page';
-import ShopifyDevelopmentServices from '../Component/ShopifyDevelopmentServices/page';
-import ShopifyBenefits from '../Component/ShopifyBenefits/page';
-import Footerpage from '../Component/Footerpage/page';
+import WhyMaccoTechShopify from '@/app/Component/WhyMaccoTechShopify/page';
+import ShopifyDevelopmentServices from '@/app/Component/ShopifyDevelopmentServices/page';
+import ShopifyBenefits from '@/app/Component/ShopifyBenefits/page';
+import Footerpage from '@/app/Component/Footerpage/page';
 
 function ShopifyDevelopment() {
   return (

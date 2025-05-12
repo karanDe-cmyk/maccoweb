@@ -1,102 +1,321 @@
-"use client";
-import React, { useState, useEffect } from "react";
-import Footerpage from "../Component/Footerpage/page";
-import Navbar from "../Component/Navbar/page";
 
-export default function Contact() {
-  const [isVisible, setIsVisible] = useState(false);
+'use client';
+import React from 'react';
+import { TextField, Button, Typography } from '@mui/material';
+import Navbar from '../Component/Navbar/page';
+import Footerpage from '../Component/Footerpage/page';
+import { motion } from 'framer-motion';
+import { FaWhatsapp, FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram } from 'react-icons/fa';
+import { MdOutlineMail } from "react-icons/md";
+import { ImLocation } from "react-icons/im";
+import { useState , useEffect} from 'react';
 
-  useEffect(() => {
-    const timeout = setTimeout(() => setIsVisible(true), 300);
-    return () => clearTimeout(timeout);
-  }, []);
-
+import { MenuItem } from '@mui/material';
+const ContactForm = () => {
+   const [isVisible, setIsVisible] = useState(false);
+  
+      useEffect(() => {
+          const observer = new IntersectionObserver((entries) => {
+              entries.forEach((entry) => {
+                  if (entry.isIntersecting) {
+                      setIsVisible(true);
+                      observer.unobserve(entry.target);
+                  }
+              });
+          });
+  
+          const target = document.getElementById('creativeWorkSection');
+          if (target) {
+              observer.observe(target);
+          }
+  
+          return () => {
+              if (target) {
+                  observer.unobserve(target);
+              }
+          };
+      }, []);
   return (
     <>
-    <Navbar/>
-    <section className=" min-h-[30vh] mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-center py-16 bg-rose-100">
+      <Navbar />
 
+      <div className="relative h-full  bg-[#EAF2FF] flex flex-col  overflow-hidden">
+      <div
+                id="creativeWorkSection"
+                className="bg-gradient-to-br from-gray-100 to-gray-50 py-16 md:py-24 bg-cover bg-center"
+                style={{
+                    backgroundImage: `url('/contactus-banner.jpg')`,
+                }}
+            >
+                <div className="container min-h-[30vh] mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-center">
+                    <div className="text-center">
+                        <h2
+                            className={`text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-6 transition-all duration-700 ${
+                                isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-90'
+                            }`}
+                        >
+                           CONVERSATION LEADS TO SCALABLE SOLUTIONS
+                        </h2>
+                        <p
+                            className={`text-white text-base sm:text-lg max-w-2xl mx-auto transition-all duration-700 ${
+                                isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-90'
+                            }`}
+                        >
+                            Open up on your query by filling in the empty fields in the form. We will align you with one of our domain experts.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        <div className="absolute top-[-80px] left-[-80px] w-[200px] h-[250px] bg-blue-300 opacity-30 rounded-full blur-3xl z-0"  />
+        <div className="absolute bottom-[-80px] right-[-80px] w-[180px] h-[250px] bg-sky-400 opacity-30 rounded-full blur-3xl z-0" />
 
-      <div className="container mx-auto px-6 md:px-12 lg:px-20 flex flex-col lg:flex-row items-center justify-between">
-        {/* Left Text Content */}
-        <div className={`lg:w-1/2 mb-10 lg:mb-0 pr-8 transform transition-all duration-700 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
-          <h2 className="text-2xl font-bold text-blue-300 mb-4 uppercase tracking-wide">Custom Software & Web Solutions</h2>
-          <h3 className="text-4xl font-extrabold text-gray-800 mb-6 leading-snug">You Know What You Want. We Make It Happen.</h3>
-          <p className="text-gray-400 mb-4 text-lg">
-          We craft bespoke software and web solutions tailored to your unique business goals. Let’s collaborate to build something meaningful.
-          </p>
-          <p className="text-gray-400 mb-6 text-md">
-          With over a decade of expertise, we’ve empowered startups and enterprises worldwide to scale with confidence.
-          </p>
-          <div>
-            {/* <h4 className="text-lg font-semibold text-gray-600 mb-3">Trusted by 100+ global clients.</h4> */}
-            {/* <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 text-sm text-white">
-              {[""].map((name) => (
-                <div key={name} className="text-center border border-gray-600 rounded py-2 bg-slate-800 hover:shadow-md transition">{name}</div>
-              ))}
-            </div> */}
-          </div>
+        <section className='mt-15'>
+        <div className="relative min-h-screen bg-[#EAF2FF] flex flex-col  overflow-hidden">
+
+          {/* Decorative blobs */}
+          <div className="absolute top-[-80px] left-[-80px] w-[200px] h-[250px] bg-blue-300 opacity-30 rounded-full blur-3xl z-0 " />
+          <div className="absolute bottom-[-80px] right-[-80px] w-[180px] h-[250px] bg-sky-400 opacity-30 rounded-full blur-3xl z-0" />
+
+          <main className="relative z-10 flex-1 py-12 px-4 md:px-8"> {/* py-16 → py-12 */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7 }}
+              className="max-w-screen-xl mx-auto"
+            >
+              <div className="flex flex-col lg:flex-row rounded-3xl overflow-hidden shadow-lg bg-white">
+                {/* Left - Contact Info */}
+                <div className="bg-gradient-to-br from-[#1e3a8a] to-[#3b82f6] text-white p-10 lg:w-1/2 flex flex-col justify-between">
+                  <div className="mb-8">
+                    <Typography variant="h4" className="font-bold mb-4">
+                      Connect With Us
+                    </Typography>
+                    <Typography variant="subtitle1" className="opacity-90 pt-3 text-base">
+                      Our friendly team is ready to answer your questions and discuss your project.
+                      Need help? Feel free to contact us and we'll respond as soon as possible.
+                    </Typography>
+
+                    <div className="space-y-3 text-base mt-10"> {/* Increased spacing and font size */}
+                      {[
+                        {
+                          icon: <FaWhatsapp className="text-1xl hover:text-orange-400" />,
+                          text: (
+                            <a
+                              href="https://wa.me/+919525104860"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="flex items-center gap-3 hover:text-orange-400 transition duration-500"
+                            >
+                              +91 95251 04860
+                            </a>
+                          ),
+                        },
+                        {
+                          icon: <MdOutlineMail className="text-1xl hover:text-orange-400" />,
+                          text: (
+                            <span className="flex items-center gap-3 hover:text-orange-400 transition duration-500">
+                              info@maccotech.in
+                            </span>
+                          ),
+                        },
+                        {
+                          icon: <ImLocation className="text-1xl hover:text-orange-400" />,
+                          text: (
+                            <span className="flex items-center gap-3 hover:text-orange-400 transition duration-500">
+                              New York, USA
+                            </span>
+                          ),
+                        },
+                      ].map((item, index) => (
+                        <motion.div
+                          key={index}
+                          whileHover={{ scale: 1.05 }}
+                          className="flex items-center gap-4 p-2 rounded-md cursor-pointer"
+                        >
+                          <span>{item.icon}</span>
+                          <span>{item.text}</span>
+                        </motion.div>
+                      ))}
+                    </div>
+
+                    <div>
+                      <Typography variant="caption" className="opacity-190 pl-1 block mb-3 pt-8 text-xl ">
+                        <div className='text-xl'>Follow us</div>
+                      </Typography>
+                      
+                      <div className="flex gap-5 mt-3">
+                        {[
+                          {
+                            icon: <FaFacebookF />,
+                            link: '#',
+                            hoverColor: 'hover:bg-[#1c3d78]', // Darker Facebook Blue
+                          },
+                          {
+                            icon: <FaTwitter />,
+                            link: '#',
+                            hoverColor: 'hover:bg-[#1876c9]', // Darker Twitter Blue
+                          },
+                          {
+                            icon: <FaLinkedinIn />,
+                            link: '#',
+                            hoverColor: 'hover:bg-[#004471]', // Darker LinkedIn Blue
+                          },
+                          {
+                            icon: <FaInstagram />,
+                            link: '#',
+                            hoverColor: 'hover:bg-[#a12153]', // Darker Instagram Pink
+                          },
+                        ].map((item, i) => (
+                          <motion.a
+                            key={i}
+                            href={item.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            whileHover={{ scale: 1.2 }}
+                            className={`transition duration-300 text-white text-2xl flex items-center justify-center w-10 h-10 rounded-full bg-[#3b82f6] ${item.hoverColor}`}
+                          >
+                            {item.icon}
+                          </motion.a>
+                        ))}
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+
+                
+                <motion.div
+                  initial={{ opacity: 0, x: 30 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.6, delay: 0.3 }}
+                  className="p-10 flex-1 bg-white"
+                >
+                  <form
+                    onSubmit={(e) => {
+                      e.preventDefault();
+                      // form submission logic
+                    }}
+                    className="space-y-6"
+                  >
+                    <Typography variant="h6" gutterBottom className="text-gray-700 font-semibold text-lg">
+                      Let’s Discuss Your Project
+                    </Typography>
+
+                    <div className="grid md:grid-cols-2 gap-6 mt-6">
+                      <TextField label="Enter Name" variant="standard" placeholder="Full Name *" fullWidth required />
+                      <TextField label="Enter Email" variant="standard" placeholder="Email Address *" fullWidth required />
+                    </div>
+
+                    <div className="grid md:grid-cols-2 gap-6 ">
+                      <TextField label="Contact Number" variant="standard" placeholder="Contact Number *" fullWidth required />
+                      {/* <TextField
+                        label="Interested in"
+                        variant="standard"
+                        required
+                        select
+                        fullWidth
+                        defaultValue=""
+                        className='px-9'
+                      
+                      >
+                        {[
+                          'Website Development',
+                          'App Development',
+                          'Digital Marketing',
+                          'UI/UX Design',
+                          'Other',
+                        ].map((option) => (
+                          <option key={option} value={option}>
+                            {option}
+                          </option>
+                        ))}
+                      </TextField> */}
+                      <TextField
+  label="Interested in"
+  variant="standard"
+  required
+  select
+  fullWidth
+  defaultValue=""
+  sx={{
+    '& .MuiInputBase-input': {
+      paddingLeft: '12px',
+      paddingRight: '12px',
+    }
+  }}
+>
+  {[
+    'Website Development',
+    'App Development',
+    'Digital Marketing',
+    'UI/UX Design',
+    'Other',
+  ].map((option) => (
+    <MenuItem key={option} value={option}>
+      {option}
+    </MenuItem>
+  ))}
+</TextField>
+                    </div>
+
+                    <TextField label="Company Name" variant="standard" placeholder="Company Name" fullWidth />
+                    <TextField
+                      label="Message"
+                      variant="standard"
+                      multiline
+                      rows={3}
+                      placeholder="Message"
+                      fullWidth
+                    />
+
+                    {/* ✅ Terms and Conditions checkbox */}
+                    <div className="flex items-start gap-2 text-sm text-gray-600 mt-4">
+                      <input
+                        type="checkbox"
+                        required
+                        className="mt-1 accent-blue-600 w-4 h-4"
+                      />
+                      <label>
+                        I agree to the{' '}
+                        <a href="/terms" className="text-blue-600 underline hover:text-blue-800">
+                          Terms and Conditions
+                        </a>
+                        .
+                      </label>
+                    </div>
+
+                    <Button
+                      type="submit"
+                      variant="contained"
+                      sx={{
+                        mt: 1,
+                        bgcolor: '#2563EB',
+                        '&:hover': { bgcolor: '#1D4ED8' },
+                        textTransform: 'none',
+                        borderRadius: '8px',
+                        px: 4,
+                        py: 1.5,
+                        fontWeight: 600,
+                      }}
+                    >
+                      Send Message
+                    </Button>
+                  </form>
+
+                </motion.div>
+
+              </div>
+            </motion.div>
+          </main>
+
+         
         </div>
+      </section>
 
-        {/* Right Form */}
-        <div className={`lg:w-1/2 backdrop-blur-md bg-white rounded-2xl shadow-xl p-10 border border-blue-100 transform transition-all duration-700 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
-          <h2 className="text-2xl font-bold text-gray-800 mb-6">Let’s Discuss Your Project</h2>
-          <form>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-              <div>
-                <label htmlFor="firstName" className="block text-sm font-medium text-gray-700">First Name</label>
-                <input type="text" id="firstName" className="mt-1 input-style" />
-              </div>
-              <div>
-                <label htmlFor="lastName" className="block text-sm font-medium text-gray-700">Last Name</label>
-                <input type="text" id="lastName" className="mt-1 input-style" />
-              </div>
-            </div>
-            <div className="mb-4">
-              <label htmlFor="companyName" className="block text-sm font-medium text-gray-700">Company Name</label>
-              <input type="text" id="companyName" className="mt-1 input-style" />
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-              <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700">Email *</label>
-                <input type="email" id="email" required className="mt-1 input-style" />
-              </div>
-              <div>
-                <label htmlFor="phone" className="block text-sm font-medium text-gray-700">Phone</label>
-                <input type="tel" id="phone" className="mt-1 input-style" />
-              </div>
-            </div>
-            <div className="mb-6">
-              <label htmlFor="message" className="block text-sm font-medium text-gray-700">Message</label>
-              <textarea id="message" rows="4" className="mt-1 input-style resize-none"></textarea>
-            </div>
-            <button type="submit" className="w-full bg-blue-600 hover:bg-blue-700 transition text-white font-semibold py-3 rounded-full shadow-lg">
-               Submit
-            </button>
-            <p className="text-xs text-center text-gray-500 mt-3">We sign NDAs and you retain full IP rights.</p>
-          </form>
-        </div>
+        <Footerpage />
       </div>
-
-      {/* Reusable Input Style */}
-      <style jsx>{`
-        .input-style {
-          width: 100%;
-          padding: 0.625rem 0.75rem;
-          border: 1px solid #d1d5db;
-          border-radius: 0.5rem;
-          font-size: 0.875rem;
-          color: #374151;
-          outline: none;
-          transition: box-shadow 0.2s, border-color 0.2s;
-        }
-        .input-style:focus {
-          border-color: #2563eb;
-          box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
-        }
-      `}</style>
-    </section>
-    <Footerpage/>
     </>
   );
-}
+};
+
+export default ContactForm;

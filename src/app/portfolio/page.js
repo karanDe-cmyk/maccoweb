@@ -182,13 +182,13 @@ function Portfolio() {
                 id="creativeWorkSection"
                 className="bg-gradient-to-br from-gray-100 to-gray-50 py-16 md:py-24 bg-cover bg-center"
                 style={{
-                    backgroundImage: `url('/portfoliobanner.jpg')`,
+                    backgroundImage: `url('/Portfolio-banner.jpg')`,
                 }}
             >
                 <div className="container min-h-[30vh] mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-center">
                     <div className="text-center">
                         <h2
-                            className={`text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-800 mb-4 sm:mb-6 transition-all duration-700 ${
+                            className={`text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-6 transition-all duration-700 ${
                                 isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-90'
                             }`}
                         >

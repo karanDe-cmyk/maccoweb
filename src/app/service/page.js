@@ -9,7 +9,8 @@ const Service = () => {
     <>
       <Navbar />
       {/* background-image: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%); */}
-      <div className="bg-gradient-to-br from-indigo-700 via-purple-800 to-pink-400 text-white py-14 sm:py-20 lg:py-28 px-6 sm:px-8 lg:px-12 xl:px-16 relative overflow-hidden">
+      <div className="bg-gradient-to-br from-indigo-300 via-purple-300 to-pink-300 text-white py-14 sm:py-20 lg:py-28 px-6 sm:px-8 lg:px-12 xl:px-16 relative overflow-hidden">
+
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-3xl font-extrabold tracking-tight sm:text-4xl lg:text-5xl">
             Custom Software <span className="text-yellow-300">Development Services</span>
