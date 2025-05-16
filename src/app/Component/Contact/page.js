@@ -586,7 +586,7 @@ const ContactForm = () => {
                         Thank You!
                       </h1>
                       <p className="text-gray-600 text-center max-w-md">
-                        Your form has been submitted successfully. We'll contact you shortly.
+                        Your form has been submitted successfully. We&aposll contact you shortly.
                       </p>
                       <button
                         onClick={() => setSuccess(false)}
