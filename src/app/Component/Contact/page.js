@@ -97,7 +97,7 @@
 // const ContactForm = () => {
 //   return (
 //     <>
-     
+
 
 //       <div className="relative h-full  bg-[#EAF2FF] flex flex-col pt-20 overflow-hidden">
 //         {/* Decorative blobs */}
@@ -260,7 +260,7 @@
 //           </motion.div>
 //         </main>
 
-        
+
 //       </div>
 //     </>
 //   );
@@ -268,7 +268,7 @@
 
 // export default ContactForm;
 'use client';
-import React from 'react';
+import React, { useState } from 'react';
 import { TextField, Button, Typography } from '@mui/material';
 import { motion } from 'framer-motion';
 import { FaWhatsapp, FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram } from 'react-icons/fa';
@@ -277,10 +277,69 @@ import { ImLocation } from "react-icons/im";
 import { MenuItem } from '@mui/material';
 
 const ContactForm = () => {
+
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    interest: '',
+    company: '',
+    message: '',
+    termsAccepted: false
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState(null);
+  const [success, setSuccess] = useState(false);
+
+  const handleChange = (e) => {
+    const { name, value, type, checked } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: type === 'checkbox' ? checked : value
+    }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setError(null);
+    setSuccess(false);
+
+    try {
+      const response = await fetch('https://webbackend-zges.onrender.com//api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.message || 'Submission failed');
+      }
+
+      // alert('Message sent successfully! We will contact you soon.');
+      setSuccess(true);
+      // Reset form
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        interest: '',
+        company: '',
+        message: '',
+        termsAccepted: false
+      });
+    } catch (err) {
+      alert(`Error: ${error.message}`);
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
   return (
     <>
-     
-
       {/* <div className="relative min-h-screen bg-[#EAF2FF] flex flex-col pt-20"> */}
       <section className='mt-15'>
         <div className="relative min-h-screen bg-[#EAF2FF] flex flex-col  overflow-hidden">
@@ -355,7 +414,7 @@ const ContactForm = () => {
                       <Typography variant="caption" className="opacity-190 pl-1 block mb-3 pt-8 text-xl ">
                         <div className='text-xl'>Follow us</div>
                       </Typography>
-                      
+
                       <div className="flex gap-5 mt-3">
                         {[
                           {
@@ -395,113 +454,153 @@ const ContactForm = () => {
                     </div>
                   </div>
                 </div>
-
-                
-                <motion.div
-                  initial={{ opacity: 0, x: 30 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6, delay: 0.3 }}
-                  className="p-10 flex-1 bg-white"
-                >
-                  <form
-                    onSubmit={(e) => {
-                      e.preventDefault();
-                      // form submission logic
-                    }}
-                    className="space-y-6"
-                  >
-                   <Typography variant="h6" gutterBottom className="text-gray-700 font-semibold text-lg">
-  Let&apos;s Discuss Your Project
-</Typography>
-
-
-                    <div className="grid md:grid-cols-2 gap-6 mt-6">
-                      <TextField label="Enter Name" variant="standard" placeholder="Full Name *" fullWidth required />
-                      <TextField label="Enter Email" variant="standard" placeholder="Email Address *" fullWidth required />
-                    </div>
-
-                    <div className="grid md:grid-cols-2 gap-6 ">
-                      <TextField label="Contact Number" variant="standard" placeholder="Contact Number *" fullWidth required />
-                      
-                      <TextField
-  label="Interested in"
-  variant="standard"
-  required
-  select
-  fullWidth
-  defaultValue=""
-  sx={{
-    '& .MuiInputBase-input': {
-      paddingLeft: '12px',
-      paddingRight: '12px',
-    }
-  }}
->
-  {[
-    'Website Development',
-    'App Development',
-    'Digital Marketing',
-    'UI/UX Design',
-    'Other',
-  ].map((option) => (
-    <MenuItem key={option} value={option}>
-      {option}
-    </MenuItem>
-  ))}
-</TextField>
-                    </div>
-
-                    <TextField label="Company Name" variant="standard" placeholder="Company Name" fullWidth />
-                    <TextField
-                      label="Message"
-                      variant="standard"
-                      multiline
-                      rows={3}
-                      placeholder="Message"
-                      fullWidth
-                    />
-
-                    {/* ✅ Terms and Conditions checkbox */}
-                    <div className="flex items-start gap-2 text-sm text-gray-600 mt-4">
-                      <input
-                        type="checkbox"
-                        required
-                        className="mt-1 accent-blue-600 w-4 h-4"
-                      />
-                      <label>
-                        I agree to the{' '}
-                        <a href="/terms" className="text-blue-600 underline hover:text-blue-800">
-                          Terms and Conditions
-                        </a>
-                        .
-                      </label>
-                    </div>
-
-                    <Button
-                      type="submit"
-                      variant="contained"
-                      sx={{
-                        mt: 1,
-                        bgcolor: '#2563EB',
-                        '&:hover': { bgcolor: '#1D4ED8' },
-                        textTransform: 'none',
-                        borderRadius: '8px',
-                        px: 4,
-                        py: 1.5,
-                        fontWeight: 600,
-                      }}
+                {
+                  !success ? (
+                    <motion.div
+                      initial={{ opacity: 0, x: 30 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 0.6, delay: 0.3 }}
+                      className="p-10 flex-1 bg-white"
                     >
-                      Send Message
-                    </Button>
-                  </form>
+                      <form
+                        onSubmit={handleSubmit}
+                        className="space-y-6"
+                      >
+                        <Typography variant="h6" gutterBottom className="text-gray-700 font-semibold text-lg">
+                          Let&apos;s Discuss Your Project
+                        </Typography>
 
-                </motion.div>
+                        <div className="grid md:grid-cols-2 gap-6 mt-6">
+                          <TextField label="Enter Name" name="name" variant="standard" value={formData.name || ''} onChange={handleChange} placeholder="Full Name *" fullWidth required />
+                          <TextField label="Enter Email" name="email" variant="standard" value={formData.email}
+                            onChange={handleChange} placeholder="Email Address *" fullWidth required />
+                        </div>
+
+                        <div className="grid md:grid-cols-2 gap-6 ">
+                          <TextField label="Contact Number" name="phone" variant="standard" value={formData.phone}
+                            onChange={handleChange} placeholder="Contact Number *" fullWidth required />
+
+                          <TextField
+                            label="Interested in"
+                            variant="standard"
+                            name="interest"
+                            required
+                            select
+                            fullWidth
+                            value={formData.interest || ''}
+                            onChange={handleChange}
+                            sx={{
+                              '& .MuiInputBase-input': {
+                                paddingLeft: '12px',
+                                paddingRight: '12px',
+                              }
+                            }}
+                          >
+                            <MenuItem value="" disabled> {/* Add a disabled empty option */}
+                              Select an option
+                            </MenuItem>
+                            {[
+                              'Website Development',
+                              'App Development',
+                              'Digital Marketing',
+                              'UI/UX Design',
+                              'Other',
+                            ].map((option) => (
+                              <MenuItem key={option} value={option}>
+                                {option}
+                              </MenuItem>
+                            ))}
+                          </TextField>
+                        </div>
+
+                        <TextField label="Company Name" name="company" value={formData.company}
+                          onChange={handleChange} className='mb-3' variant="standard" placeholder="Company Name" fullWidth />
+                        <TextField
+                          label="Message"
+                          name="message"
+                          variant="standard"
+                          multiline
+                          rows={3}
+                          placeholder="Message"
+                          value={formData.message}
+                          onChange={handleChange}
+                          fullWidth
+                        />
+
+                        {/* ✅ Terms and Conditions checkbox */}
+                        <div className="flex items-start gap-2 text-sm text-gray-600 mt-4">
+                          <input
+                            type="checkbox"
+                            required
+                            name="termsAccepted"
+                            className="mt-1 accent-blue-600 w-4 h-4"
+                            checked={formData.termsAccepted}
+                            onChange={handleChange}
+                          />
+                          <label>
+                            I agree to the{' '}
+                            <a href="/terms" className="text-blue-600 underline hover:text-blue-800">
+                              Terms and Conditions
+                            </a>
+                            .
+                          </label>
+                        </div>
+
+                        <Button
+                          type="submit"
+                          variant="contained"
+                          disabled={isSubmitting}
+                          sx={{
+                            mt: 1,
+                            bgcolor: '#2563EB',
+                            '&:hover': { bgcolor: '#1D4ED8' },
+                            textTransform: 'none',
+                            borderRadius: '8px',
+                            px: 4,
+                            py: 1.5,
+                            fontWeight: 600,
+                          }}
+                        >
+                          {isSubmitting ? 'Sending...' : 'Send Message'}
+                        </Button>
+                      </form>
+
+                    </motion.div>
+                  ) : (
+                    <div className="flex flex-col items-center justify-center w-full">
+                      <svg
+                        className="w-16 h-16 text-green-500 mb-4"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M5 13l4 4L19 7"
+                        />
+                      </svg>
+                      <h1 className="text-2xl font-semibold text-gray-700 mb-2">
+                        Thank You!
+                      </h1>
+                      <p className="text-gray-600 text-center max-w-md">
+                        Your form has been submitted successfully. We'll contact you shortly.
+                      </p>
+                      <button
+                        onClick={() => setSuccess(false)}
+                        className="mt-6 px-6 py-2 cursor-pointer bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
+                      >
+                        Submit Another Response
+                      </button>
+                    </div>
+                  )
+                }
 
               </div>
             </motion.div>
           </main>
-
-         
         </div>
       </section>
     </>

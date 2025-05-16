@@ -45,12 +45,13 @@ export default function HomeBanner() {
     <>
  
       <section
-        className="w-full min-h-[80vh] bg-cover bg-center flex flex-col lg:flex-row items-center justify-between px-6 py-12 lg:px-20 transition-all duration-700"
+        className="w-full relative min-h-[80vh] bg-cover bg-center flex flex-col lg:flex-row items-center justify-between px-6 py-12 lg:px-20 transition-all duration-700"
         style={{
     backgroundImage: `url(${background})`,
     backgroundSize: "cover",
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
+    top: '80px'
   }}
       >
         <div

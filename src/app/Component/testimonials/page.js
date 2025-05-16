@@ -51,10 +51,10 @@
 //     const interval = setInterval(() => {
 //       nextSlide();
 //     }, 2000);
-  
+
 //     return () => clearInterval(interval);
 //   }, [currentSlide]);
-  
+
 
 //   return (
 //     // <section className="py-12 bg-gray-50  w-full min-h-[70vh]" style={{
@@ -306,36 +306,39 @@
 "use client";
 import React, { useState, useEffect, useCallback } from "react";
 import Image from "next/image"; // Import Image from next/image
+import axios from 'axios';
 
-const testimonials = [
-  {
-    name: "Priya Sharma",
-    position: "UI/UX Designer",
-    message: "Macco Tech helped us to revamp our business. The solution they built for us greatly improved our effectiveness and satisfaction with our customers.",
-    image: "/emp1.jpg",
-  },
-  {
-    name: "Rohit Verma",
-    position: "Software Engineer",
-    message: "Macoo Tech transformed our business with their software development services. The solution they built for us has significantly improved our efficiency and customer satisfaction.",
-    image: "/emp2.jpg",
-  },
-  {
-    name: "Sneha Joshi",
-    position: "Project Manager",
-    message: "Macco Tech helped us streamline our operations and improve overall productivity. Their services were tailored to our needs, and the results have been excellent.",
-    image: "/emp3.jpg",
-  },
-  {
-    name: "Amit Kulkarni",
-    position: "DevOps Engineer",
-    message: "The team at Macoo Tech is outstanding. They provided solutions that truly aligned with our business goals, and we saw remarkable improvements in our processes.",
-    image: "/emp4.jpg",
-  },
-];
+// const testimonials = [
+//   {
+//     name: "Priya Sharma",
+//     position: "UI/UX Designer",
+//     message: "Macco Tech helped us to revamp our business. The solution they built for us greatly improved our effectiveness and satisfaction with our customers.",
+//     image: "/emp1.jpg",
+//   },
+//   {
+//     name: "Rohit Verma",
+//     position: "Software Engineer",
+//     message: "Macoo Tech transformed our business with their software development services. The solution they built for us has significantly improved our efficiency and customer satisfaction.",
+//     image: "/emp2.jpg",
+//   },
+//   {
+//     name: "Sneha Joshi",
+//     position: "Project Manager",
+//     message: "Macco Tech helped us streamline our operations and improve overall productivity. Their services were tailored to our needs, and the results have been excellent.",
+//     image: "/emp3.jpg",
+//   },
+//   {
+//     name: "Amit Kulkarni",
+//     position: "DevOps Engineer",
+//     message: "The team at Macoo Tech is outstanding. They provided solutions that truly aligned with our business goals, and we saw remarkable improvements in our processes.",
+//     image: "/emp4.jpg",
+//   },
+// ];
 
 const EmployeeTestimonials = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [testimonials, setTestimonials] = useState([]);
+  const [loading, setLoading] = useState(true);
   const cardsPerSlide = 2;
   const totalSlides = Math.ceil(testimonials.length / cardsPerSlide);
 
@@ -350,6 +353,26 @@ const EmployeeTestimonials = () => {
   const goToSlide = (index) => {
     setCurrentSlide(index);
   };
+
+
+  useEffect(() => {
+    const fetchEmployees = async () => {
+      try {
+        setLoading(true);
+        const response = await axios.get('http://localhost:5001/api/employees');
+        setTestimonials(response.data.data); // Assuming your API returns { data: [...] }
+      } catch (err) {
+        setError(err.message);
+        console.error('Error fetching employees:', err);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchEmployees();
+  }, []);
+
+  console.log(testimonials);
 
   // Fixing the useEffect hook to avoid warning about missing dependencies
   useEffect(() => {
@@ -390,22 +413,23 @@ const EmployeeTestimonials = () => {
                     >
                       <div className="flex items-center mb-4">
                         <Image
-                          src={testimonial.image}
-                          alt={testimonial.name}
+                          src={`http://localhost:5001/uploads/${testimonial.profilePicture}`}
+                          alt={testimonial.fullName}
                           width={56}  // Set appropriate width
                           height={56} // Set appropriate height
                           className="rounded-full mr-4 object-cover"
+                          style={{height: '56px'}}
                         />
                         <div>
                           <h3 className="text-lg font-semibold text-gray-800">
-                            {testimonial.name}
+                            {testimonial.fullName}
                           </h3>
                           <p className="text-sm text-gray-500">
-                            {testimonial.position}
+                            {testimonial.role}
                           </p>
                         </div>
                       </div>
-                      <p className="text-gray-600">{testimonial.message}</p>
+                      <p className="text-gray-600">{testimonial.description}</p>
                     </div>
                   ))}
               </div>
@@ -437,11 +461,10 @@ const EmployeeTestimonials = () => {
             {Array.from({ length: totalSlides }).map((_, index) => (
               <button
                 key={index}
-                className={`w-3 h-3 rounded-full transition-transform duration-300 ${
-                  currentSlide === index
+                className={`w-3 h-3 rounded-full transition-transform duration-300 ${currentSlide === index
                     ? "bg-teal-500 scale-110"
                     : "bg-gray-300 hover:bg-gray-400"
-                }`}
+                  }`}
                 onClick={() => goToSlide(index)}
               ></button>
             ))}

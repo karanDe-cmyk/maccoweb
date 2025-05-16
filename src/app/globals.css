@@ -56,3 +56,14 @@ body {
   background-color: #121212;
   color: white;
 }
+
+/* Add this in your global stylesheet */
+.custom-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.custom-scroll {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
