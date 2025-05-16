@@ -3,17 +3,32 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import { FaWhatsapp, FaEnvelope, FaMobileAlt, FaShoppingCart, FaJsSquare } from 'react-icons/fa';
+import { FaChevronDown, FaChevronUp } from 'react-icons/fa'; // Import icons for dropdown
 
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isServicesMenuOpen, setIsServicesMenuOpen] = useState(false);
+  const [isServicesMobileMenuOpen, setIsServicesMobileMenuOpen] = useState(false); // State for mobile services dropdown
+  const [isContactMobileMenuOpen, setIsContactMobileMenuOpen] = useState(false); // State for mobile contact dropdown
+  const [isServicesMenuOpen, setIsServicesMenuOpen] = useState(false); // Desktop services dropdown
+  const [isContactMenuOpen, setIsContactMenuOpen] = useState(false); // Desktop contact dropdown
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
+    setIsServicesMobileMenuOpen(false); // Close other mobile menus when toggling
+    setIsContactMobileMenuOpen(false);
+  };
+
+  const toggleMobileServicesMenu = () => {
+    setIsServicesMobileMenuOpen(!isServicesMobileMenuOpen);
+  };
+
+  const toggleMobileContactMenu = () => {
+    setIsContactMobileMenuOpen(!isContactMobileMenuOpen);
   };
 
   return (
-    <nav className="bg-[#0e0a2e] h-[90px] shadow-lg relative z-50">
+    <nav className="fixed top-0 left-0 right-0  bg-[#0e0a2e] h-[90px] shadow-lg z-50">
       <div className="max-w-7xl mx-auto relative">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
@@ -56,7 +71,7 @@ export default function Navbar() {
 
           {/* Desktop Menu */}
           <div className="hidden md:flex space-x-6 items-center relative mt-10">
-            <Link href="/home"><button className="text-white text-xl hover:text-purple-700 transition-all cursor-pointer">Home</button></Link>
+            <Link href="/home"><button className="text-white text-[17px] hover:text-purple-700 transition-all cursor-pointer">Home</button></Link>
 
             {/* Services with Mega Menu */}
             <div
@@ -65,11 +80,11 @@ export default function Navbar() {
               onMouseLeave={() => setIsServicesMenuOpen(false)}
             >
               <Link href='/service'>
-                <button className="text-white text-xl hover:text-purple-700 transition-all cursor-pointer">Services</button>
+                <button className="text-white text-[17px] hover:text-purple-700 transition-all cursor-pointer">Services</button>
               </Link>
 
               {isServicesMenuOpen && (
-                <div className="absolute top-full left-4 -translate-x-1/2 bg-white shadow-lg z-50 py-6 px-6 w-[320px] rounded-md max-h-[300px] overflow-y-auto grid gap-4">
+                <div className="custom-scroll absolute top-full left-4 -translate-x-1/2 bg-white shadow-lg z-50 py-6 px-6 w-[320px] rounded-md max-h-[300px] overflow-y-auto grid gap-4 scrollbar-none">
                   <div className="bg-[#f9f9f9] p-4 rounded-md shadow-md hover:shadow-lg transition-all">
                     <div className="text-purple-700 font-bold mb-2">Mobile App Development</div>
                     <ul className="space-y-1 text-sm">
@@ -101,28 +116,142 @@ export default function Navbar() {
               )}
             </div>
 
-            <Link href="/about-us"><button className="text-white text-xl hover:text-purple-700 cursor-pointer">About Us</button></Link>
-            <Link href="/careers"><button className="text-white text-xl hover:text-purple-700 cursor-pointer">Careers</button></Link>
-            <Link href="/portfolio"><button className="text-white text-xl hover:text-purple-700 cursor-pointer">Portfolio</button></Link>
-            <Link href="/case-study"><button className="text-white text-xl hover:text-purple-700 cursor-pointer">Case Study</button></Link>
-            <Link href="/pricing"><button className="text-white text-xl hover:text-purple-700 cursor-pointer">Pricing</button></Link>
-            <Link href="/contact">
-              <button className="bg-blue-600 text-white text-xl rounded-[30px] px-6 py-2 hover:bg-purple-600 transition-all cursor-pointer">Contact Us</button>
-            </Link>
+            <Link href="/about-us"><button className="text-white text-[17px] hover:text-purple-700 cursor-pointer">About Us</button></Link>
+            <Link href="/careers"><button className="text-white text-[17px] hover:text-purple-700 cursor-pointer">Careers</button></Link>
+            <Link href="/portfolio"><button className="text-white text-[17px] hover:text-purple-700 cursor-pointer">Portfolio</button></Link>
+            <Link href="/case-study"><button className="text-white text-[17px] hover:text-purple-700 cursor-pointer">Case Study</button></Link>
+            <Link href="/pricing"><button className="text-white text-[17px] hover:text-purple-700 cursor-pointer">Pricing</button></Link>
+
+            <div
+              className="relative"
+              onMouseEnter={() => setIsContactMenuOpen(true)}
+              onMouseLeave={() => setIsContactMenuOpen(false)}
+            >
+              <Link href="/contact">
+                <button className="bg-blue-600 text-white text-[17px] font-change  rounded-[30px] px-6 py-2 hover:bg-purple-600 transition-all cursor-pointer">Contact Us</button>
+              </Link>
+
+              {isContactMenuOpen && (
+                <div
+                  className="absolute top-full left-1/2 -translate-x-1/2 bg-[#f9f9f9] p-4 rounded-md shadow-lg hover:shadow-xl transition-all
+                                    z-50 w-[calc(100vw-40px)] max-w-[280px] grid gap-4 mt-4"
+                >
+                  <ul className="space-y-2 text-sm text-center">
+                    <li>
+                      <a
+                        href="https://wa.me/+919525104860"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex justify-center items-center gap-2 text-green-600 hover:text-green-800"
+                      >
+                        <FaWhatsapp className="w-5 h-5" />
+                        <span>+91-9525104860</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="mailto:info@maccotech.com"
+                        className="flex justify-center items-center gap-2 text-blue-700 hover:text-blue-900"
+                      >
+                        <FaEnvelope className="w-5 h-5" />
+                        <span>info@maccotech.com</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+
+              )}
+            </div>
           </div>
         </div>
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden absolute top-full left-0 w-full bg-white shadow-md z-40">
-            <div className="px-4 py-2 space-y-2">
-              <Link href="/service"><button className="block w-full text-left py-2 hover:bg-gray-100">Services</button></Link>
-              <Link href="/about-us"><button className="block w-full text-left py-2 hover:bg-gray-100">About Us</button></Link>
-              <Link href="/careers"><button className="block w-full text-left py-2 hover:bg-gray-100">Careers</button></Link>
-              <Link href="/portfolio"><button className="block w-full text-left py-2 hover:bg-gray-100">Portfolio</button></Link>
-              <Link href="/case-study"><button className="block w-full text-left py-2 hover:bg-gray-100">Case Study</button></Link>
-              <Link href="/pricing"><button className="block w-full text-left py-2 hover:bg-gray-100">Pricing</button></Link>
-              <Link href="/contact"><button className="block w-full text-left py-2 hover:bg-gray-100">Contact Us</button></Link>
+          <div className="md:hidden absolute left-0 w-full bg-gradient-to-b from-white via-gray-100 to-gray-200 shadow-lg z-40 rounded-b-lg" style={{top: '100px'}}>
+            <div className="px-6 py-4 space-y-3">
+
+              <Link href="/home">
+                <button className="w-full text-left py-2 px-3 rounded-md hover:bg-gray-100 transition-all font-medium">Home</button>
+              </Link>
+
+              {/* Services Dropdown */}
+              <div className="relative">
+                <button
+                  onClick={toggleMobileServicesMenu}
+                  className="w-full text-left py-2 px-3 flex justify-between items-center rounded-md hover:bg-gray-100 transition-all font-medium"
+                >
+                  Services
+                  {isServicesMobileMenuOpen ? <FaChevronUp /> : <FaChevronDown />}
+                </button>
+
+                {isServicesMobileMenuOpen && (
+                  <div className="ml-4 mt-2 space-y-1 border-l border-gray-300 pl-4">
+                    {[
+                      { href: "/AndroidAppDevelopment", label: "Android App Development" },
+                      { href: "/iOSAppDevelopment", label: "iOS App Development" },
+                      { href: "/ReactNativeAppDevelopment", label: "React-Native App" },
+                      { href: "/ecommerce-application-development", label: "E-Commerce App" },
+                      { href: "/ShopifyDevelopment", label: "Shopify Development" },
+                      { href: "/Graphics-design", label: "Graphic Design" },
+                      { href: "/Branding", label: "Branding" },
+                      { href: "/ReactJsDevelopment", label: "React Js Development" },
+                      { href: "/Social", label: "Social Media" },
+                      { href: "/email", label: "Email Marketing" },
+                      { href: "/angular", label: "Angular Development" },
+                      { href: "/vue", label: "Vue.js Development" },
+                      { href: "/svelte", label: "Svelte Development" },
+                    ].map(({ href, label }) => (
+                      <Link key={href} href={href}>
+                        <button className="block text-sm text-left w-full py-1 px-2 hover:bg-gray-100 rounded-md transition">{label}</button>
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+
+              {/* Other Links */}
+              {[
+                { href: "/about-us", label: "About Us" },
+                { href: "/careers", label: "Careers" },
+                { href: "/portfolio", label: "Portfolio" },
+                { href: "/case-study", label: "Case Study" },
+                { href: "/pricing", label: "Pricing" },
+              ].map(({ href, label }) => (
+                <Link key={href} href={href}>
+                  <button className="w-full text-left py-2 px-3 rounded-md hover:bg-gray-100 transition-all font-medium">{label}</button>
+                </Link>
+              ))}
+
+              {/* Contact Us Section */}
+              <div className="pt-4 border-t border-gray-300">
+                <button
+                  onClick={toggleMobileContactMenu}
+                  className="bg-blue-600 text-white font-semibold w-full text-center rounded-full py-2 hover:bg-purple-600 transition-all"
+                >
+                  Contact Us
+                </button>
+
+                {isContactMobileMenuOpen && (
+                  <div className="mt-2 space-y-2 pl-2">
+                    <a
+                      href="https://wa.me/+919525104860"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 text-green-600 hover:text-green-800"
+                    >
+                      <FaWhatsapp className="w-5 h-5" />
+                      <span>+91-9525104860</span>
+                    </a>
+                    <a
+                      href="mailto:info@maccotech.com"
+                      className="flex items-center gap-2 text-blue-700 hover:text-blue-900"
+                    >
+                      <FaEnvelope className="w-5 h-5" />
+                      <span>info@maccotech.com</span>
+                    </a>
+                  </div>
+                )}
+              </div>
             </div>
           </div>
         )}
