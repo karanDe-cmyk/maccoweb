@@ -359,7 +359,7 @@ const EmployeeTestimonials = () => {
     const fetchEmployees = async () => {
       try {
         setLoading(true);
-        const response = await axios.get('http://localhost:5001/api/employees');
+        const response = await axios.get('https://webbackend-zges.onrender.com/api/employees');
         setTestimonials(response.data.data); // Assuming your API returns { data: [...] }
       } catch (err) {
         setError(err.message);
