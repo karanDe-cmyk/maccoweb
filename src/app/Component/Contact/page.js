@@ -306,7 +306,7 @@ const ContactForm = () => {
     setSuccess(false);
 
     try {
-      const response = await fetch('https://webbackend-zges.onrender.com//api/contact', {
+      const response = await fetch('https://webbackend-zges.onrender.com/api/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
