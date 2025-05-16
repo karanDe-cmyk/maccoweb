@@ -120,7 +120,7 @@ function HeroSection() {
 
               <Link href="/contact">
                 <button className="bg-white cursor-pointer text-indigo-900 font-semibold py-3 px-6 rounded-full hover:bg-indigo-100 transition duration-300">
-                  LET'S DISCUSS
+                  LET&aposS DISCUSS
                 </button>
               </Link>
             </motion.div>
@@ -168,7 +168,7 @@ function HeroSection() {
                       className="bg-white border border-gray-300 px-3 py-2.5 rounded-md cursor-pointer flex items-center justify-between shadow-sm hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
                     >
                       <div className="flex items-center gap-2">
-                        <img
+                        <Image
                           src={countryFlags[formData.countryCode]}
                           alt="Flag"
                           className="w-5 h-5"
@@ -199,7 +199,7 @@ function HeroSection() {
                             onClick={() => handleCountryCodeChange(code)}
                             className="flex items-center gap-2 px-3 py-2 text-sm cursor-pointer hover:bg-gray-100"
                           >
-                            <img src={flagUrl} alt={`${code} flag`} className="w-5 h-5" />
+                            <Image src={flagUrl} alt={`${code} flag`} className="w-5 h-5" />
                             {code}
                           </li>
                         ))}
