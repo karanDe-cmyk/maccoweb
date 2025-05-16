@@ -59,7 +59,7 @@ function ReactNative() {
         message: formData.message
       };
 
-      const response = await fetch('http://localhost:5001/api/getquote', {
+      const response = await fetch('https://webbackend-zges.onrender.com/api/getquote', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
