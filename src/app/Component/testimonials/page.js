@@ -413,7 +413,7 @@ const EmployeeTestimonials = () => {
                     >
                       <div className="flex items-center mb-4">
                         <Image
-                          src={`http://localhost:5001/uploads/${testimonial.profilePicture}`}
+                          src={`https://webbackend-zges.onrender.com/uploads/${testimonial.profilePicture}`}
                           alt={testimonial.fullName}
                           width={56}  // Set appropriate width
                           height={56} // Set appropriate height
