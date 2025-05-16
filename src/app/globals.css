@@ -5,12 +5,9 @@
 @tailwind utilities;
 @import "tailwindcss";
 
-
 body {
   font-family: 'Poppins', Helvetica, sans-serif;
 }
-
-
 
 /* Fade-in and move-up animation */
 .animate {
