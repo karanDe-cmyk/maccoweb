@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { services } from '../Data/page';
 import ServiceHeader from '../ServiceHeader/page';
-
+import Image from 'next/image';
 export default function GetQuote() {
 
     const countryFlags = {
@@ -114,7 +114,7 @@ export default function GetQuote() {
 
                             <Link href="/contact">
                                 <button className="bg-white cursor-pointer text-indigo-900 font-semibold py-3 px-6 rounded-full hover:bg-indigo-100 transition duration-300">
-                                    LET'S DISCUSS
+                                    LET&aposS DISCUSS
                                 </button>
                             </Link>
                         </motion.div>
@@ -162,7 +162,7 @@ export default function GetQuote() {
                                             className="bg-white border border-gray-300 px-3 py-2.5 rounded-md cursor-pointer flex items-center justify-between shadow-sm hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
                                         >
                                             <div className="flex items-center gap-2">
-                                                <img
+                                                <Image
                                                     src={countryFlags[formData.countryCode]}
                                                     alt="Flag"
                                                     className="w-5 h-5"
@@ -193,7 +193,7 @@ export default function GetQuote() {
                                                         onClick={() => handleCountryCodeChange(code)}
                                                         className="flex items-center gap-2 px-3 py-2 text-sm cursor-pointer hover:bg-gray-100"
                                                     >
-                                                        <img src={flagUrl} alt={`${code} flag`} className="w-5 h-5" />
+                                                        <Image src={flagUrl} alt={`${code} flag`} className="w-5 h-5" />
                                                         {code}
                                                     </li>
                                                 ))}
