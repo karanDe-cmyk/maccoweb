@@ -317,7 +317,7 @@ function Careers() {
                   Thank You!
                 </h1>
                 <p className="text-white/90 text-center mb-6">
-                  Your application has been submitted successfully. We'll contact you shortly.
+                  Your application has been submitted successfully. We&aposll contact you shortly.
                 </p>
                 <button
                   onClick={() => {
