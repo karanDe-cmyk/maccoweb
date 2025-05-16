@@ -149,7 +149,7 @@ function ReactNative() {
 
               <Link href="/contact">
                 <button className="bg-white cursor-pointer text-indigo-900 font-semibold py-3 px-6 rounded-full hover:bg-indigo-100 transition duration-300">
-                  LET'S DISCUSS
+                  LET&aposS DISCUSS
                 </button>
               </Link>
             </motion.div>
@@ -197,7 +197,7 @@ function ReactNative() {
                       className="bg-white border border-gray-300 px-3 py-2.5 rounded-md cursor-pointer flex items-center justify-between shadow-sm hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
                     >
                       <div className="flex items-center gap-2">
-                        <img
+                        <Image
                           src={countryFlags[formData.countryCode]}
                           alt="Flag"
                           className="w-5 h-5"
@@ -228,7 +228,7 @@ function ReactNative() {
                             onClick={() => handleCountryCodeChange(code)}
                             className="flex items-center gap-2 px-3 py-2 text-sm cursor-pointer hover:bg-gray-100"
                           >
-                            <img src={flagUrl} alt={`${code} flag`} className="w-5 h-5" />
+                            <Image src={flagUrl} alt={`${code} flag`} className="w-5 h-5" />
                             {code}
                           </li>
                         ))}
@@ -302,7 +302,7 @@ function ReactNative() {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              {/* <img
+              {/* <Image
             src="https://viitorcloud.com/blog/wp-content/uploads/2022/06/React-Native-Framework-for-Mobile-App-Development.jpg"
             alt="React Native App Development Illustration"
             className="rounded-lg shadow-lg w-full h-auto"
@@ -329,7 +329,7 @@ function ReactNative() {
           <div className="lg:flex lg:items-center lg:justify-between">
             {/* Left Side: Image */}
             <div className="mb-8 lg:mb-0 lg:w-1/2">
-              {/* <img
+              {/* <Image
               src="http://127.0.0.1:5500/images/react-benefit.webp" // Replace with your actual image URL
               alt="Why Choose React Native"
               className="rounded-lg shadow-lg w-full h-auto"
