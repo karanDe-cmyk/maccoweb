@@ -40,7 +40,7 @@ function CaseStudiesSection() {
     <>
       <Navbar />
       <section>
-        <div className="bg-gradient-to-br from-blue-100 to-purple-100 py-16 md:py-24 lg:py-32 relative overflow-hidden">
+        <div className="bg-gradient-to-br from-blue-100 to-purple-100 py-16 md:py-24 lg:py-32 relative overflow-hidden" style={{top: '85px'}}>
           <div className="container mx-auto text-center relative z-10">
             <h1 className="text-2xl font-bold text-gray-900 tracking-tight sm:text-3xl lg:text-4xl mb-6">
               Case Studies
