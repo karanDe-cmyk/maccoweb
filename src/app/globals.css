@@ -9,6 +9,10 @@ body {
   font-family: 'Poppins', Helvetica, sans-serif;
 }
 
+body::-webkit-scrollbar {
+  display: none;
+}
+
 /* Fade-in and move-up animation */
 .animate {
     opacity: 1 !important;
