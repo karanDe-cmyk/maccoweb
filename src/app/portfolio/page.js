@@ -180,9 +180,10 @@ function Portfolio() {
             <Navbar />
             <div
                 id="creativeWorkSection"
-                className="bg-gradient-to-br from-gray-100 to-gray-50 py-16 md:py-24 bg-cover bg-center"
+                className="bg-gradient-to-br relative from-gray-100 to-gray-50 py-16 md:py-24 bg-cover bg-center"
                 style={{
                     backgroundImage: `url('/Portfolio-banner.jpg')`,
+                    top: '85px'
                 }}
             >
                 <div className="container min-h-[30vh] mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-center">
