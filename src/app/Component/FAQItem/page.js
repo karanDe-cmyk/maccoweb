@@ -199,26 +199,26 @@ const FAQSection = () => {
                 {/* Left Side: Overlapping Smaller Images */}
                 <div className="relative lg:w-1/4 w-full ml-57">
                     {/* Top Image - Smaller */}
-                    <div className="overflow-hidden rounded-md shadow-md w-70 h-46">
-                        <Image
-                            src="/sq1.jpg"
-                            alt="Image 1"
-                            width={356}
-                            height={260}
-                            className="object-cover w-full h-full"
-                        />
-                    </div>
+                    // <div className="overflow-hidden rounded-md shadow-md w-70 h-46">
+                    //     <Image
+                    //         src="/sq1.jpg"
+                    //         alt="Image 1"
+                    //         width={356}
+                    //         height={260}
+                    //         className="object-cover w-full h-full"
+                    //     />
+                    // </div>
 
                     {/* Bottom Image - Slight Overlap */}
-                    <div className="absolute  right-61 top-32 overflow-hidden rounded-md shadow-lg w-62 h-42">
-                        <Image
-                            src="/sq2.jpg"
-                            alt="Image 2"
-                            width={324}
-                            height={228}
-                            className="object-cover w-full h-full"
-                        />
-                    </div>
+                    // <div className="absolute  right-61 top-32 overflow-hidden rounded-md shadow-lg w-62 h-42">
+                    //     <Image
+                    //         src="/sq2.jpg"
+                    //         alt="Image 2"
+                    //         width={324}
+                    //         height={228}
+                    //         className="object-cover w-full h-full"
+                    //     />
+                    // </div>
                 </div>
 
                 {/* Right Side: FAQ Items */}
