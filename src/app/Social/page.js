@@ -256,13 +256,13 @@ function HeroSection() {
               className="mb-6 lg:mb-0 lg:w-1/2"
             >
               <h2 className="text-2xl font-bold text-gray-900 sm:text-3xl">
-                Ignite Your Brand`s Presence with Strategic Social Media
+                Ignite Your Brand{{"'"}}s Presence with Strategic Social Media
               </h2>
               <p className="mt-4 text-base text-gray-700">
                 Transform your social media from a task to a powerful tool for connection and growth.
               </p>
               <p className="mt-4 text-base text-gray-600">
-                Macco Tech helps businesses thrive in the social landscape. We craft tailored strategies that resonate with your audience, build vibrant communities, and drive tangible results. Our experts leverage the latest trends and platforms to enhance your brand`s visibility, engagement, and ultimately, your bottom line. From compelling content creation to insightful analytics and community management, we provide the expertise to make your social media efforts truly impactful.
+                Macco Tech helps businesses thrive in the social landscape. We craft tailored strategies that resonate with your audience, build vibrant communities, and drive tangible results. Our experts leverage the latest trends and platforms to enhance your brand{{"'"}}s visibility, engagement, and ultimately, your bottom line. From compelling content creation to insightful analytics and community management, we provide the expertise to make your social media efforts truly impactful.
               </p>
             </motion.div>
 
