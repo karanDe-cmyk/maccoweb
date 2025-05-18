@@ -51,7 +51,7 @@ export default function GraphicDesignSection() {
     return (
         <>
             <Navbar />
-           <div className="flex flex-col-reverse md:flex-row bg-black text-white p-6 md:p-16 gap-10 relative">
+           <div className="flex flex-col-reverse md:flex-row bg-black text-white p-6 md:p-16 gap-10 relative" style={{top: '85px'}}>
       {/* Background Image */}
       <div
         className="absolute top-0 left-0 w-full h-full bg-cover bg-center opacity-40"
