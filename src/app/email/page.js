@@ -148,7 +148,7 @@ function EmailMarketing() {
 
               <Link href="/contact">
                 <button className="bg-white cursor-pointer text-indigo-900 font-semibold py-3 px-6 rounded-full hover:bg-indigo-100 transition duration-300">
-                  LET{{"'"}}S DISCUSS
+                  LET{"'"}S DISCUSS
                 </button>
               </Link>
             </motion.div>
@@ -287,7 +287,7 @@ function EmailMarketing() {
               </h2>
               <p className="text-lg text-gray-700 leading-relaxed mb-8">
                 At Macco Tech, we specialize in designing and executing powerful email marketing strategies
-                that drive engagement and conversions. Whether you{{"'"}}re aiming to nurture leads or boost sales,
+                that drive engagement and conversions. Whether you{"'"}re aiming to nurture leads or boost sales,
                 our services are tailored to meet your specific business goals.
               </p>
             </motion.div>
