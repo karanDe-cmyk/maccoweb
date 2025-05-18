@@ -123,7 +123,7 @@ export default function Navbar() {
             <Link href="/pricing"><button className="text-white text-[17px] hover:text-purple-700 cursor-pointer">Pricing</button></Link>
 
             <div
-              className="relative group"
+              className="relative"
               // onMouseEnter={() => setIsContactMenuOpen(true)}
               // onMouseLeave={() => setIsContactMenuOpen(false)}
             >
