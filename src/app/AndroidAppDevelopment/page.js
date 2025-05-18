@@ -341,7 +341,7 @@ const AndroidAppDevelopmentPage = () => {
                     className="object-cover w-full h-full"
                     src="/androidimage.avif"
                     alt="Android Development"
-                    width={600}
+                    width={500}
                     height={400}
                   />
                 </div>
