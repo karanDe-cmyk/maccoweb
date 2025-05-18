@@ -26,15 +26,15 @@ export default function RootLayout({ children }) {
         {children}
         <div className="fixed bottom-5 left-5 z-50">
             <Link 
-              href="https://wa.me/yourphonenumber" 
+              href="https://wa.me/9525104860" 
               target="_blank" 
               rel="noopener noreferrer"
             >
               <div className="bg-green-500 text-white p-3 rounded-full shadow-lg hover:bg-green-600 transition">
                 <svg 
                   xmlns="http://www.w3.org/2000/svg" 
-                  width="24" 
-                  height="24" 
+                  width="45" 
+                  height="45" 
                   viewBox="0 0 24 24" 
                   fill="currentColor"
                 >
