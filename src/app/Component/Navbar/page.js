@@ -128,14 +128,14 @@ export default function Navbar() {
               // onMouseLeave={() => setIsContactMenuOpen(false)}
             >
               <Link href="/contact">
-                <button className="bg-blue-600 text-white text-[17px] font-change rounded-[30px] px-6 py-2 hover:bg-purple-600 transition-all cursor-pointer">Contact Us</button>
+                <button id="dropdownHoverButton" data-dropdown-toggle="dropdownHover" data-dropdown-trigger="hover" type="button" className="bg-blue-600 text-white text-[17px] font-change rounded-[30px] px-6 py-2 hover:bg-purple-600 transition-all cursor-pointer">Contact Us</button>
               </Link>
 
               {isContactMenuOpen && (
-                <div
+                <div id="dropdownHover"
                   className="absolute top-full left-1/2 -translate-x-1/2 bg-[#f9f9f9] p-4 rounded-md shadow-lg hover:shadow-xl transition-all z-50 w-[calc(100vw-40px)] max-w-[280px] grid gap-4 mt-4 mr-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-opacity duration-200"
                 >
-                  <ul className="space-y-2 text-sm text-center">
+                  <ul className="space-y-2 text-sm text-center" aria-labelledby="dropdownHoverButton">
                     <li>
                       <a
                         href="https://wa.me/+919525104860"
