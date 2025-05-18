@@ -337,7 +337,7 @@ function ReactNative() {
               <Image
                 src="/reactnative.jpg"
                 alt="Why Choose React Native"
-                width={600}
+                width={500}
                 height={400}
                 className="rounded-lg shadow-lg w-full h-auto"
               />
