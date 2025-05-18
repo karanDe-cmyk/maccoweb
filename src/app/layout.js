@@ -26,7 +26,7 @@ export default function RootLayout({ children }) {
         {children}
         <div className="fixed bottom-5 left-5 z-50">
             <Link 
-              href="https://wa.me/9525104860" 
+              href="https://wa.me/+919525104860" 
               target="_blank" 
               rel="noopener noreferrer"
             >
