@@ -244,7 +244,7 @@ const PricingSection = () => {
       <Navbar />
 
       <section>
-        <div className="bg-gradient-to-br from-green-100 to-teal-100 py-16 md:py-24 lg:py-32 relative overflow-hidden">
+        <div className="bg-gradient-to-br from-green-100 to-teal-100 py-16 md:py-24 lg:py-32 relative overflow-hidden" style={{top: '85px'}}>
           {/* Zoom-in animation on content */}
           <motion.div
             className="container mx-auto text-center relative z-10"
