@@ -201,7 +201,7 @@ const FAQSection = () => {
                     {/* Top Image - Smaller */}
                     <div className="overflow-hidden rounded-md shadow-md w-70 h-46">
                         <Image
-                            src="https://maccotech.in/assets/imgs/about/sq1.jpg"
+                            src="/sq1.jpg"
                             alt="Image 1"
                             width={356}
                             height={260}
@@ -212,7 +212,7 @@ const FAQSection = () => {
                     {/* Bottom Image - Slight Overlap */}
                     <div className="absolute  right-61 top-32 overflow-hidden rounded-md shadow-lg w-62 h-42">
                         <Image
-                            src="https://maccotech.in/assets/imgs/about/sq2.jpg"
+                            src="/sq2.jpg"
                             alt="Image 2"
                             width={324}
                             height={228}
