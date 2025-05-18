@@ -134,7 +134,7 @@ export default function Navbar() {
               {isContactMenuOpen && (
                 <div
                   className="absolute top-full left-1/2 -translate-x-1/2 bg-[#f9f9f9] p-4 rounded-md shadow-lg hover:shadow-xl transition-all
-                                    z-50 w-[calc(100vw-40px)] max-w-[280px] grid gap-4 mt-4"
+                                    z-50 w-[calc(100vw-40px)] max-w-[280px] grid gap-4 mt-4 mr-5"
                 >
                   <ul className="space-y-2 text-sm text-center">
                     <li>
