@@ -286,7 +286,7 @@ function HeroSection() {
                 src="/ios2.png" // Image path
                 alt="iOS App Development" // Image alt text
                 className="rounded-lg shadow-xl w-full h-[370px]" // Tailwind classes for styling
-                width={600} // Specify the width (for optimization)
+                width={500} // Specify the width (for optimization)
                 height={370} // Specify the height (for optimization)
               />
             </motion.div>
