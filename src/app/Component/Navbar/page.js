@@ -58,7 +58,7 @@ export default function Navbar() {
 
           {/* Mobile Menu Button */}
           <div className="md:hidden">
-            <button onClick={toggleMobileMenu} className="text-white mt-10 mr-8 hover:text-purple-700 focus:outline-none">
+            <button onClick={toggleMobileMenu} className="text-white mt-10 mr-5 hover:text-purple-700 focus:outline-none">
               <svg className="h-10 w-10 fill-current" viewBox="0 0 24 24">
                 {isMobileMenuOpen ? (
                   <path fillRule="evenodd" d="M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 0 1-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829z" clipRule="evenodd" />
@@ -77,7 +77,7 @@ export default function Navbar() {
             <div
               className="relative"
               onMouseEnter={() => setIsServicesMenuOpen(true)}
-              onMouseLeave={() =>  setIsContactMenuOpen(false)}
+              onMouseLeave={() => setIsServicesMenuOpen(false)}
             >
               <Link href='/service'>
                 <button className="text-white text-[17px] hover:text-purple-700 transition-all cursor-pointer">Services</button>
@@ -125,18 +125,15 @@ export default function Navbar() {
             <div
               className="relative"
               onMouseEnter={() => setIsContactMenuOpen(true)}
-              onMouseLeave={() => {
-                // Add a small delay before closing
-                setTimeout(() => setIsContactMenuOpen(false), 3000);
-              }}
+              onMouseLeave={() => setIsContactMenuOpen(false)}
             >
               <Link href="/contact">
-                <button className="bg-blue-600 text-white text-[17px] font-change rounded-[30px] px-6 py-2 hover:bg-purple-600 transition-all cursor-pointer">Contact Us</button>
+                <button className="bg-blue-600 text-white text-[17px] font-change  rounded-[30px] px-6 py-2 hover:bg-purple-600 transition-all cursor-pointer">Contact Us</button>
               </Link>
 
               {isContactMenuOpen && (
                 <div
-                  className="absolute top-full left-1/2 -translate-x-1/2 bg-[#f9f9f9] p-4 rounded-md shadow-lg hover:shadow-xl transition-all z-50 w-[calc(100vw-40px)] max-w-[280px] grid gap-4 mt-3"
+                  className="absolute top-full left-1/2 -translate-x-1/2 bg-[#f9f9f9] p-4 rounded-md shadow-lg hover:shadow-xl transition-all z-50 w-[calc(100vw-40px)] max-w-[280px] grid gap-4"
                 >
                   <ul className="space-y-2 text-sm text-center">
                     <li>
@@ -169,7 +166,7 @@ export default function Navbar() {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden absolute left-0 w-full bg-gradient-to-b from-white via-gray-100 to-gray-200 shadow-lg z-40 rounded-b-lg" style={{top: '100px'}}>
+          <div className="md:hidden absolute left-0 w-full bg-gradient-to-b from-white via-gray-100 to-gray-200 shadow-lg z-40 rounded-b-lg" style={{ top: '100px' }}>
             <div className="px-6 py-4 space-y-3">
 
               <Link href="/home">
