@@ -77,7 +77,10 @@ export default function Navbar() {
             <div
               className="relative"
               onMouseEnter={() => setIsServicesMenuOpen(true)}
-              onMouseLeave={() => setIsServicesMenuOpen(false)}
+              onMouseLeave={() => {
+                  // Add a small delay before closing
+                  setTimeout(() => setIsContactMenuOpen(false), 300);
+                }}
             >
               <Link href='/service'>
                 <button className="text-white text-[17px] hover:text-purple-700 transition-all cursor-pointer">Services</button>
