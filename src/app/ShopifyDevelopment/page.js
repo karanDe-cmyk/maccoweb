@@ -66,7 +66,7 @@ function ShopifyDevelopment() {
 
 
     <section>
-      <div className="bg-white py-16 md:py-24">
+      <div className="bg-white py-24 md:py-24">
         <div className="container mx-auto px-4 md:px-8 lg:flex items-center justify-between">
 
           {/* Text Section */}
