@@ -65,7 +65,7 @@ function CaseStudiesSection() {
         animate={{ opacity: 1 }}
         transition={{ duration: 0.6 }}
       >
-        <div className="bg-gray-50 py-12">
+        <div className="bg-gray-50 py-24">
           <div className="container mx-auto px-4">
             <motion.h2
               initial={{ y: 40, opacity: 0 }}
@@ -83,7 +83,7 @@ function CaseStudiesSection() {
                   initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50, y: 30 }}
                   animate={{ opacity: 1, x: 0, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.2 }}
-                  className="bg-white rounded-md shadow-md overflow-hidden"
+                  className="bg-white rounded-md shadow-md overflow-hidden p-3"
                 >
                   <Image
                     src={study.imageSrc}
