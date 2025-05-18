@@ -308,7 +308,7 @@ const ReactJsDevelopment = () => {
         <>
             <Navbar />
             <section>
-                <div className="bg-indigo-900 min-h-[35vh] py-16 md:py-24 lg:py-32 text-white relative overflow-hidden">
+                <div className="bg-indigo-900 min-h-[35vh] py-16 md:py-24 lg:py-32 text-white relative overflow-hidden" style={{top: '85px'}}>
                     {/* Background SVGs */}
                     <div className="absolute top-0 left-0 w-full h-full opacity-20 pointer-events-none">
                         <svg
