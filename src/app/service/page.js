@@ -11,7 +11,7 @@ const Service = () => {
     <>
       <Navbar />
       {/* background-image: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%); */}
-      <div className="relative text-white py-14 sm:py-20 lg:py-28 px-6 sm:px-8 lg:px-12 xl:px-16 overflow-hidden">
+      <div className="relative text-white py-14 sm:py-20 lg:py-28 px-6 sm:px-8 lg:px-12 xl:px-16 overflow-hidden" style={{top: '85px'}}>
         {/* Background Image */}
         <Image
           src="/service.avif"
