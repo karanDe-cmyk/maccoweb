@@ -300,7 +300,7 @@ const ReactJsDevelopment = () => {
                                 <Image
                                     src="/ReactJs1.webp"
                                     alt="ReactJS Illustration"
-                                    width={600}
+                                    width={500}
                                     height={400}
                                     className="rounded-lg object-cover"
                                 />
