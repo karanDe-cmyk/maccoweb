@@ -108,7 +108,7 @@ function ShopifyDevelopment() {
     </section>
 
     <WhyMaccoTechShopify/>
-    <div className="bg-white py-10 md:py-16">
+    <div className="bg-white py-24 md:py-24">
       <div className="container mx-auto px-4 md:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
         {/* Left Section */}
         <div className="text-center md:text-left">
@@ -130,15 +130,15 @@ function ShopifyDevelopment() {
         
         </div> */}
         <div className="flex justify-center">
-  <div className="relative w-48 h-60 md:w-60 md:h-72">
-    <Image
-      src="/shopify-dev-img.png"
-      alt="Shopify Illustration"
-      fill // this makes the image cover the entire parent container
-      className="object-contain rounded-lg shadow-md"
-    />
-  </div>
-</div>
+          <div className="relative w-48 h-60 md:w-60 md:h-72">
+            <Image
+              src="/shopify-dev-img.png"
+              alt="Shopify Illustration"
+              fill // this makes the image cover the entire parent container
+              className="object-contain rounded-lg shadow-md"
+            />
+          </div>
+        </div>
 
         {/* Right Section */}
         <div className="text-center md:text-left">
