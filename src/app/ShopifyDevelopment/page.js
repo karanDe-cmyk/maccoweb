@@ -20,6 +20,7 @@ function ShopifyDevelopment() {
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
+          top: '85px'
         }}
       >
         <div className="absolute inset-0 bg-black opacity-60" aria-hidden="true" />
