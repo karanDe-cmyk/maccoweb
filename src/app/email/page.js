@@ -303,7 +303,7 @@ function EmailMarketing() {
               <Image
                 src="/email1.png"  // Correct path from the 'public' folder
                 alt="Email Marketing"
-                width={600}  // Approx width
+                width={500}  // Approx width
                 height={400}  // Approx height
                 className="rounded-lg shadow-lg w-full h-auto"
               />
