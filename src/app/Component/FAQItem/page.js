@@ -66,7 +66,7 @@ const FAQSection = () => {
         <section className="py-16 bg-gray-900 text-white">
             <div className="container mx-auto px-4 md:px-8 lg:px-12 flex flex-col lg:flex-row items-center gap-12">
                 <div className="lg:w-1/2">
-                    <h2 className="text-3xl font-bold mb-8">Frequently asked Questions</h2>
+                    <h2 className="text-3xl font-bold mb-8 sm:text-center">Frequently asked Questions</h2>
                     <div>
                         {faqData.map((faq, index) => (
                             <FAQItem key={index} faq={faq} index={index} />
