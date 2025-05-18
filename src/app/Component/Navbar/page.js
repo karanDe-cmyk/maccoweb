@@ -75,9 +75,9 @@ export default function Navbar() {
 
             {/* Services with Mega Menu */}
             <div
-              className="relative group"
-              // onMouseEnter={() => setIsServicesMenuOpen(true)}
-              // onMouseLeave={() =>  setIsContactMenuOpen(false)}
+              className="relative"
+              onMouseEnter={() => setIsServicesMenuOpen(true)}
+              onMouseLeave={() =>  setIsContactMenuOpen(false)}
             >
               <Link href='/service'>
                 <button className="text-white text-[17px] hover:text-purple-700 transition-all cursor-pointer">Services</button>
@@ -128,13 +128,12 @@ export default function Navbar() {
               // onMouseLeave={() => setIsContactMenuOpen(false)}
             >
               <Link href="/contact">
-                <button className="bg-blue-600 text-white text-[17px] font-change  rounded-[30px] px-6 py-2 hover:bg-purple-600 transition-all cursor-pointer">Contact Us</button>
+                <button className="bg-blue-600 text-white text-[17px] font-change rounded-[30px] px-6 py-2 hover:bg-purple-600 transition-all cursor-pointer">Contact Us</button>
               </Link>
 
               {isContactMenuOpen && (
                 <div
-                  className="absolute top-full left-1/2 -translate-x-1/2 bg-[#f9f9f9] p-4 rounded-md shadow-lg hover:shadow-xl transition-all
-                                    z-50 w-[calc(100vw-40px)] max-w-[280px] grid gap-4 mt-4 mr-5"
+                  className="absolute top-full left-1/2 -translate-x-1/2 bg-[#f9f9f9] p-4 rounded-md shadow-lg hover:shadow-xl transition-all z-50 w-[calc(100vw-40px)] max-w-[280px] grid gap-4 mt-4 mr-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-opacity duration-200"
                 >
                   <ul className="space-y-2 text-sm text-center">
                     <li>
