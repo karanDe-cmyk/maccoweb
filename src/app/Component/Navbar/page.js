@@ -125,7 +125,10 @@ export default function Navbar() {
             <div
               className="relative"
               onMouseEnter={() => setIsContactMenuOpen(true)}
-              onMouseLeave={() => setIsContactMenuOpen(false)}
+              onMouseLeave={() => {
+                // Add a small delay before closing
+                setTimeout(() => setIsContactMenuOpen(false), 300);
+              }}
             >
               <Link href="/contact">
                 <button className="bg-blue-600 text-white text-[17px] font-change  rounded-[30px] px-6 py-2 hover:bg-purple-600 transition-all cursor-pointer">Contact Us</button>
