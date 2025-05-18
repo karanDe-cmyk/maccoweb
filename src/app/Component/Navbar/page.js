@@ -124,8 +124,11 @@ export default function Navbar() {
 
             <div
               className="relative"
-              // onMouseEnter={() => setIsContactMenuOpen(true)}
-              // onMouseLeave={() => setIsContactMenuOpen(false)}
+              onMouseEnter={() => setIsContactMenuOpen(true)}
+              onMouseLeave={() => {
+                // Add a small delay before closing
+                setTimeout(() => setIsContactMenuOpen(false), 8000);
+              }}
             >
               <Link href="/contact">
                 <button id="dropdownHoverButton" data-dropdown-toggle="dropdownHover" data-dropdown-trigger="hover" type="button" className="bg-blue-600 text-white text-[17px] font-change rounded-[30px] px-6 py-2 hover:bg-purple-600 transition-all cursor-pointer">Contact Us</button>
