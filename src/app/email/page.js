@@ -199,7 +199,7 @@ function EmailMarketing() {
                         <Image
                           src={countryFlags[formData.countryCode]}
                           alt="Flag"
-                          className="w-5 h-5"
+                          className="w-3 h-5"
                         />
                         <span className="text-sm">{formData.countryCode}</span>
                       </div>
@@ -270,7 +270,7 @@ function EmailMarketing() {
         </div>
       </section>
 
-      <div className="py-16 bg-white">
+      <div className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="lg:flex lg:items-center lg:justify-between">
 
@@ -287,7 +287,7 @@ function EmailMarketing() {
               </h2>
               <p className="text-lg text-gray-700 leading-relaxed mb-8">
                 At Macco Tech, we specialize in designing and executing powerful email marketing strategies
-                that drive engagement and conversions. Whether you`re aiming to nurture leads or boost sales,
+                that drive engagement and conversions. Whether you{{"'"}}re aiming to nurture leads or boost sales,
                 our services are tailored to meet your specific business goals.
               </p>
             </motion.div>
