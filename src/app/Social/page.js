@@ -120,12 +120,11 @@ function HeroSection() {
 
               <Link href="/contact">
                 <button className="bg-white cursor-pointer text-indigo-900 font-semibold py-3 px-6 rounded-full hover:bg-indigo-100 transition duration-300">
-                  LET{{"'"}}S DISCUSS
+                  LET{"'"}S DISCUSS
                 </button>
               </Link>
             </motion.div>
 
-            {/* Right Form Section with framer motion */}
             <motion.div
               initial={{ opacity: 0, y: 100 }}
               animate={{ opacity: 1, y: 0 }}
@@ -241,13 +240,11 @@ function HeroSection() {
           </div>
         </div>
       </section>
-      {/* ----second Section---- */}
 
       <div className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="lg:flex lg:items-center lg:justify-between">
 
-            {/* LEFT SIDE WITH ANIMATION */}
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -256,13 +253,13 @@ function HeroSection() {
               className="mb-6 lg:mb-0 lg:w-1/2"
             >
               <h2 className="text-2xl font-bold text-gray-900 sm:text-3xl">
-                Ignite Your Brand{{"'"}}s Presence with Strategic Social Media
+                Ignite Your Brand{"'"}s Presence with Strategic Social Media
               </h2>
               <p className="mt-4 text-base text-gray-700">
                 Transform your social media from a task to a powerful tool for connection and growth.
               </p>
               <p className="mt-4 text-base text-gray-600">
-                Macco Tech helps businesses thrive in the social landscape. We craft tailored strategies that resonate with your audience, build vibrant communities, and drive tangible results. Our experts leverage the latest trends and platforms to enhance your brand{{"'"}}s visibility, engagement, and ultimately, your bottom line. From compelling content creation to insightful analytics and community management, we provide the expertise to make your social media efforts truly impactful.
+                Macco Tech helps businesses thrive in the social landscape. We craft tailored strategies that resonate with your audience, build vibrant communities, and drive tangible results. Our experts leverage the latest trends and platforms to enhance your brand{"'"}s visibility, engagement, and ultimately, your bottom line. From compelling content creation to insightful analytics and community management, we provide the expertise to make your social media efforts truly impactful.
               </p>
             </motion.div>
 
@@ -287,7 +284,7 @@ function HeroSection() {
           </div>
         </div>
       </div>  {/* second section end */}
-
+    
 
 
       <section>
