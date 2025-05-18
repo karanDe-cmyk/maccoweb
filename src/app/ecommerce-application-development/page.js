@@ -41,7 +41,7 @@ function TypingText() {
       <section>
 <div
     className="relative bg-cover bg-center bg-no-repeat min-h-[80vh] flex items-center md:items-start justify-start"
-    style={{ backgroundImage: 'url(/ecom.png)' }}
+    style={{ backgroundImage: 'url(/ecom.png)'; top: '85px' }}
 >
     {/* Overlay */}
     <div className="absolute inset-0 opacity-50 z-0 bg-black"></div>
