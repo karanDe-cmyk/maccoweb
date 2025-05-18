@@ -123,44 +123,51 @@ export default function Navbar() {
             <Link href="/pricing"><button className="text-white text-[17px] hover:text-purple-700 cursor-pointer">Pricing</button></Link>
 
             <div
-              className="relative"
+              className="relative inline-block text-left"
               onMouseEnter={() => setIsContactMenuOpen(true)}
               onMouseLeave={() => setIsContactMenuOpen(false)}
             >
               <Link href="/contact">
-                <button className="bg-blue-600 text-white text-[17px] font-change  rounded-[30px] px-6 py-2 hover:bg-purple-600 transition-all cursor-pointer">Contact Us</button>
+                <button className="bg-indigo-600 text-white font-semibold text-sm px-6 py-2 rounded-full hover:bg-indigo-700 transition-all shadow-md">
+                  Contact Us
+                </button>
               </Link>
-
+        
               {isContactMenuOpen && (
                 <div
-                  className="absolute top-full left-1/2 -translate-x-1/2 bg-[#f9f9f9] p-4 rounded-md shadow-lg hover:shadow-xl transition-all z-50 w-[calc(100vw-40px)] max-w-[280px] grid gap-4"
+                  className="absolute z-50 mt-3 w-64 left-1/2 -translate-x-1/2 bg-white backdrop-blur-md border border-gray-200 rounded-xl shadow-xl transition-all duration-200 ease-out animate-fade-in"
                 >
-                  <ul className="space-y-2 text-sm text-center">
-                    <li>
-                      <a
-                        href="https://wa.me/+919525104860"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex justify-center items-center gap-2 text-green-600 hover:text-green-800"
-                      >
-                        <FaWhatsapp className="w-5 h-5" />
-                        <span>+91-9525104860</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="mailto:info@maccotech.com"
-                        className="flex justify-center items-center gap-2 text-blue-700 hover:text-blue-900"
-                      >
-                        <FaEnvelope className="w-5 h-5" />
-                        <span>info@maccotech.com</span>
-                      </a>
-                    </li>
-                  </ul>
+                  <div className="p-4">
+                    <ul className="space-y-4 text-sm text-gray-800">
+                      <li>
+                        <a
+                          href="https://wa.me/+919525104860"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-2 hover:text-green-700 transition-colors"
+                        >
+                          <FaWhatsapp className="w-5 h-5 text-green-600" />
+                          <span className="truncate">+91-9525104860</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="mailto:info@maccotech.com"
+                          className="flex items-center gap-2 hover:text-blue-700 transition-colors"
+                        >
+                          <FaEnvelope className="w-5 h-5 text-blue-600" />
+                          <span className="truncate">info@maccotech.com</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-full">
+                    <div className="w-3 h-3 bg-white border-t border-l border-gray-200 rotate-45"></div>
+                  </div>
                 </div>
-
               )}
             </div>
+
           </div>
         </div>
 
