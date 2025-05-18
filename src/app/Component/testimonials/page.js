@@ -51,10 +51,10 @@
 //     const interval = setInterval(() => {
 //       nextSlide();
 //     }, 2000);
-
+  
 //     return () => clearInterval(interval);
 //   }, [currentSlide]);
-
+  
 
 //   return (
 //     // <section className="py-12 bg-gray-50  w-full min-h-[70vh]" style={{
@@ -306,7 +306,6 @@
 "use client";
 import React, { useState, useEffect, useCallback } from "react";
 import Image from "next/image"; // Import Image from next/image
-import axios from 'axios';
 
 const testimonials = [
   {
@@ -337,8 +336,6 @@ const testimonials = [
 
 const EmployeeTestimonials = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [testimonials, setTestimonials] = useState([]);
-  const [loading, setLoading] = useState(true);
   const cardsPerSlide = 2;
   const totalSlides = Math.ceil(testimonials.length / cardsPerSlide);
 
@@ -353,26 +350,6 @@ const EmployeeTestimonials = () => {
   const goToSlide = (index) => {
     setCurrentSlide(index);
   };
-
-
-  // useEffect(() => {
-  //   const fetchEmployees = async () => {
-  //     try {
-  //       setLoading(true);
-  //       const response = await axios.get('https://webbackend-zges.onrender.com/api/employees');
-  //       setTestimonials(response.data.data); // Assuming your API returns { data: [...] }
-  //     } catch (err) {
-  //       setError(err.message);
-  //       console.error('Error fetching employees:', err);
-  //     } finally {
-  //       setLoading(false);
-  //     }
-  //   };
-
-  //   fetchEmployees();
-  // }, []);
-
-  // console.log(testimonials);
 
   // Fixing the useEffect hook to avoid warning about missing dependencies
   useEffect(() => {
@@ -418,7 +395,6 @@ const EmployeeTestimonials = () => {
                           width={56}  // Set appropriate width
                           height={56} // Set appropriate height
                           className="rounded-full mr-4 object-cover"
-                          // style={{height: '56px'}}
                         />
                         <div>
                           <h3 className="text-lg font-semibold text-gray-800">
@@ -461,10 +437,11 @@ const EmployeeTestimonials = () => {
             {Array.from({ length: totalSlides }).map((_, index) => (
               <button
                 key={index}
-                className={`w-3 h-3 rounded-full transition-transform duration-300 ${currentSlide === index
+                className={`w-3 h-3 rounded-full transition-transform duration-300 ${
+                  currentSlide === index
                     ? "bg-teal-500 scale-110"
                     : "bg-gray-300 hover:bg-gray-400"
-                  }`}
+                }`}
                 onClick={() => goToSlide(index)}
               ></button>
             ))}
