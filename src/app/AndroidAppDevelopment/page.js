@@ -284,7 +284,7 @@ const AndroidAppDevelopmentPage = () => {
       </section>
 
       <section>
-        <div className="bg-white py-20">
+        <div className="bg-white py-30">
           <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
             <div className="lg:grid lg:grid-cols-2 lg:gap-20 items-center">
               {/* Text Content */}
