@@ -413,23 +413,23 @@ const EmployeeTestimonials = () => {
                     >
                       <div className="flex items-center mb-4">
                         <Image
-                          src={`https://webbackend-zges.onrender.com/${testimonial.profilePictureUrl}`}
-                          alt={testimonial.fullName}
+                          src={testimonial.image}
+                          alt={testimonial.name}
                           width={56}  // Set appropriate width
                           height={56} // Set appropriate height
                           className="rounded-full mr-4 object-cover"
-                          style={{height: '56px'}}
+                          // style={{height: '56px'}}
                         />
                         <div>
                           <h3 className="text-lg font-semibold text-gray-800">
-                            {testimonial.fullName}
+                            {testimonial.name}
                           </h3>
                           <p className="text-sm text-gray-500">
-                            {testimonial.role}
+                            {testimonial.position}
                           </p>
                         </div>
                       </div>
-                      <p className="text-gray-600">{testimonial.description}</p>
+                      <p className="text-gray-600">{testimonial.message}</p>
                     </div>
                   ))}
               </div>
