@@ -59,7 +59,7 @@ export default function Home1() {
       <Navbar />
       <HomeBanner />
       
-      <div className="w-full bg-white min-h-[70vh] flex items-start justify-center">
+      <div className="w-full bg-white min-h-[70vh] flex items-start justify-center mt-4">
         <div
           className={`w-full rounded-lg shadow-1xl overflow-hidden min-h-[70vh] p-6 md:p-10 lg:p-14 transform transition-all duration-700 ease-in-out ${
             isVisible
@@ -78,8 +78,8 @@ export default function Home1() {
           </p>
           <div className="text-gray-600 text-justify px-4 md:px-12">
           <p>
-  Macco Tech is a globally recognized Web, App, Game, and Digital Marketing company with branches in India and Australia. Since our inception, we have been delivering top-tier solutions in Web Design, App Development, Game Development, Digital Marketing, Product Design, and Cloud Services. Our expertise in game development sets us apart, creating immersive and engaging experiences that captivate players worldwide. Combined with our commitment to customer satisfaction and a high rate of repeat business, we stand as pioneers in the industry. Whether it&apos;s a cutting-edge app, an innovative game, or a robust digital strategy, we turn your ideas into reality with unmatched precision and creativity. Let&apos;s build the future together – Your success is our mission.
-</p>
+            Macco Tech is a globally recognized Web, App, Game, and Digital Marketing company with branches in India and Australia. Since our inception, we have been delivering top-tier solutions in Web Design, App Development, Game Development, Digital Marketing, Product Design, and Cloud Services. Our expertise in game development sets us apart, creating immersive and engaging experiences that captivate players worldwide. Combined with our commitment to customer satisfaction and a high rate of repeat business, we stand as pioneers in the industry. Whether it&apos;s a cutting-edge app, an innovative game, or a robust digital strategy, we turn your ideas into reality with unmatched precision and creativity. Let&apos;s build the future together – Your success is our mission.
+          </p>
 
           </div>
         </div>
