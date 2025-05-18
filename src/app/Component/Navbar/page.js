@@ -127,7 +127,7 @@ export default function Navbar() {
               onMouseEnter={() => setIsContactMenuOpen(true)}
               onMouseLeave={() => {
                 // Add a small delay before closing
-                setTimeout(() => setIsContactMenuOpen(false), 8000);
+                setTimeout(() => setIsContactMenuOpen(false), 3000);
               }}
             >
               <Link href="/contact">
