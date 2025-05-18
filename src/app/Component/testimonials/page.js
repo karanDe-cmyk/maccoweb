@@ -308,32 +308,32 @@ import React, { useState, useEffect, useCallback } from "react";
 import Image from "next/image"; // Import Image from next/image
 import axios from 'axios';
 
-// const testimonials = [
-//   {
-//     name: "Priya Sharma",
-//     position: "UI/UX Designer",
-//     message: "Macco Tech helped us to revamp our business. The solution they built for us greatly improved our effectiveness and satisfaction with our customers.",
-//     image: "/emp1.jpg",
-//   },
-//   {
-//     name: "Rohit Verma",
-//     position: "Software Engineer",
-//     message: "Macoo Tech transformed our business with their software development services. The solution they built for us has significantly improved our efficiency and customer satisfaction.",
-//     image: "/emp2.jpg",
-//   },
-//   {
-//     name: "Sneha Joshi",
-//     position: "Project Manager",
-//     message: "Macco Tech helped us streamline our operations and improve overall productivity. Their services were tailored to our needs, and the results have been excellent.",
-//     image: "/emp3.jpg",
-//   },
-//   {
-//     name: "Amit Kulkarni",
-//     position: "DevOps Engineer",
-//     message: "The team at Macoo Tech is outstanding. They provided solutions that truly aligned with our business goals, and we saw remarkable improvements in our processes.",
-//     image: "/emp4.jpg",
-//   },
-// ];
+const testimonials = [
+  {
+    name: "Priya Sharma",
+    position: "UI/UX Designer",
+    message: "Macco Tech helped us to revamp our business. The solution they built for us greatly improved our effectiveness and satisfaction with our customers.",
+    image: "/emp1.jpg",
+  },
+  {
+    name: "Rohit Verma",
+    position: "Software Engineer",
+    message: "Macoo Tech transformed our business with their software development services. The solution they built for us has significantly improved our efficiency and customer satisfaction.",
+    image: "/emp2.jpg",
+  },
+  {
+    name: "Sneha Joshi",
+    position: "Project Manager",
+    message: "Macco Tech helped us streamline our operations and improve overall productivity. Their services were tailored to our needs, and the results have been excellent.",
+    image: "/emp3.jpg",
+  },
+  {
+    name: "Amit Kulkarni",
+    position: "DevOps Engineer",
+    message: "The team at Macoo Tech is outstanding. They provided solutions that truly aligned with our business goals, and we saw remarkable improvements in our processes.",
+    image: "/emp4.jpg",
+  },
+];
 
 const EmployeeTestimonials = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -355,24 +355,24 @@ const EmployeeTestimonials = () => {
   };
 
 
-  useEffect(() => {
-    const fetchEmployees = async () => {
-      try {
-        setLoading(true);
-        const response = await axios.get('https://webbackend-zges.onrender.com/api/employees');
-        setTestimonials(response.data.data); // Assuming your API returns { data: [...] }
-      } catch (err) {
-        setError(err.message);
-        console.error('Error fetching employees:', err);
-      } finally {
-        setLoading(false);
-      }
-    };
+  // useEffect(() => {
+  //   const fetchEmployees = async () => {
+  //     try {
+  //       setLoading(true);
+  //       const response = await axios.get('https://webbackend-zges.onrender.com/api/employees');
+  //       setTestimonials(response.data.data); // Assuming your API returns { data: [...] }
+  //     } catch (err) {
+  //       setError(err.message);
+  //       console.error('Error fetching employees:', err);
+  //     } finally {
+  //       setLoading(false);
+  //     }
+  //   };
 
-    fetchEmployees();
-  }, []);
+  //   fetchEmployees();
+  // }, []);
 
-  console.log(testimonials);
+  // console.log(testimonials);
 
   // Fixing the useEffect hook to avoid warning about missing dependencies
   useEffect(() => {
