@@ -75,12 +75,9 @@ export default function Navbar() {
 
             {/* Services with Mega Menu */}
             <div
-              className="relative"
-              onMouseEnter={() => setIsServicesMenuOpen(true)}
-              onMouseLeave={() => {
-                  // Add a small delay before closing
-                  setTimeout(() => setIsContactMenuOpen(false), 300);
-                }}
+              className="relative group"
+              // onMouseEnter={() => setIsServicesMenuOpen(true)}
+              // onMouseLeave={() =>  setIsContactMenuOpen(false)}
             >
               <Link href='/service'>
                 <button className="text-white text-[17px] hover:text-purple-700 transition-all cursor-pointer">Services</button>
@@ -126,12 +123,9 @@ export default function Navbar() {
             <Link href="/pricing"><button className="text-white text-[17px] hover:text-purple-700 cursor-pointer">Pricing</button></Link>
 
             <div
-              className="relative"
-              onMouseEnter={() => setIsContactMenuOpen(true)}
-              onMouseLeave={() => {
-                // Add a small delay before closing
-                setTimeout(() => setIsContactMenuOpen(false), 300);
-              }}
+              className="relative group"
+              // onMouseEnter={() => setIsContactMenuOpen(true)}
+              // onMouseLeave={() => setIsContactMenuOpen(false)}
             >
               <Link href="/contact">
                 <button className="bg-blue-600 text-white text-[17px] font-change  rounded-[30px] px-6 py-2 hover:bg-purple-600 transition-all cursor-pointer">Contact Us</button>
