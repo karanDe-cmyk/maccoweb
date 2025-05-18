@@ -7,6 +7,7 @@ import HomeBanner from "../Component/HomeBanner/page";
 import Navbar from "../Component/Navbar/page";
 import Footerpage from "../Component/Footerpage/page";
 import Contact from "../Component/Contact/page";
+import FAQSection from "../Component/FAQItem/page";
 
 export default function Home1() {
   const [isVisible, setIsVisible] = useState(false);
@@ -141,6 +142,7 @@ export default function Home1() {
       </section>
       
       <EmployeeTestimonials />
+      <FAQSection/>
       <Contact />
       <Footerpage />
     </>
