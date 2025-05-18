@@ -275,7 +275,7 @@ function HeroSection() {
               <Image
                 src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8c29jaWFsJTIwbWVkaWF8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60"
                 alt="Social Media Marketing"
-                width={800}
+                width={500}
                 height={370}
                 className="rounded-lg shadow-xl w-full h-[370px] object-cover"
               />
