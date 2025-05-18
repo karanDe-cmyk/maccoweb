@@ -161,7 +161,7 @@ const AndroidAppDevelopmentPage = () => {
 
               <Link href="/contact">
                 <button className="bg-white cursor-pointer text-indigo-900 font-semibold py-3 px-6 rounded-full hover:bg-indigo-100 transition duration-300">
-                  LET&aposS DISCUSS
+                  LET{"'"}S DISCUSS
                 </button>
               </Link>
             </motion.div>
