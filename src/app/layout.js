@@ -17,9 +17,21 @@ const geistMono = GeistMono({
 // Define your title mappings for specific paths
 const titleMap: Record<string, string> = {
   'about': 'About Us',
-  'services': 'Our Services',
+  'service': 'Our Services',
+  'AndroidAppDevelopment': 'Android App Development',
+  'iOSAppDevelopment': 'IOS App Development',
+  'ReactNativeAppDevelopment': 'React Native App Development',
+  'ecommerce-application-development': 'Ecommerce Application Development',
+  'ShopifyDevelopment': 'Shopify Development',
+  'Graphics-design': 'Graphics Design',
+  'Branding': 'Branding',
+  'ReactJsDevelopment': 'ReactJs Development',
+  'Social': 'Social',
+  'email': 'Email',
   'contact': 'Contact Us',
-  'products': 'Our Products',
+  'careers': 'Careers',
+  'portfolio': 'Portfolio',
+  'case-study': 'Case Study',
   // Add more mappings as needed
 };
 
