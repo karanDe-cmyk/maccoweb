@@ -70,7 +70,7 @@ export async function generateMetadata({ params }) {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <body className={`${inter.variable} ${robotoMono.variable} antialiased`}>
         {children}
         <div className="fixed bottom-5 right-5 z-50">
           <Link 
