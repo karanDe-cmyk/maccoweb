@@ -35,8 +35,8 @@ const EmployeeTestimonials = () => {
       try {
         setLoading(true);
         const response = await axios.get('https://webbackend-zges.onrender.com/api/employees');
-        console.log("Api Response:", response)
-        setTestimonials(response.data || []); // Handle potential undefined data
+        // console.log("Api Response:", response)
+        setTestimonials(response.data.data || []); // Handle potential undefined data
       } catch (err) {
         setError(err.message);
         console.error('Error fetching employees:', err);
@@ -49,7 +49,7 @@ const EmployeeTestimonials = () => {
     fetchEmployees();
   }, []);
 
-  console.log(testimonials);
+  // console.log(testimonials);
 
   useEffect(() => {
     if (totalSlides > 0) {
