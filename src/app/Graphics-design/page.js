@@ -152,7 +152,7 @@ export default function GraphicDesignSection() {
             >
               <FiPhone size={18} />
             </motion.span>
-            <span>+91 62388 66535</span>
+            <span>+91 95251 04860</span>
           </p>
           <p className="flex items-center gap-2">
             <motion.span
