@@ -7,14 +7,13 @@ import { notFound } from 'next/navigation';
 const geistSans = GeistSans({
   variable: "--font-geist-sans",
   subsets: ["latin"],
-});
+})
 
 const geistMono = GeistMono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
-});
+})
 
-// Define your title mappings for specific paths
 const titleMap: Record<string, string> = {
   'about': 'About Us',
   'service': 'Our Services',
@@ -32,7 +31,6 @@ const titleMap: Record<string, string> = {
   'careers': 'Careers',
   'portfolio': 'Portfolio',
   'case-study': 'Case Study',
-  // Add more mappings as needed
 };
 
 export async function generateMetadata({ params }: { params?: { [key: string]: string } }): Promise<Metadata> {
@@ -41,8 +39,6 @@ export async function generateMetadata({ params }: { params?: { [key: string]: s
   if (params) {
     path = Object.values(params).join('/');
   }
-
-  // Format the title based on the path
   const formattedTitle = titleMap[path] || 
     path.split('/')
       .pop()
