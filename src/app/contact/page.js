@@ -9,6 +9,7 @@ import { FaWhatsapp, FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram } from 'r
 import { MdOutlineMail } from "react-icons/md";
 import { ImLocation } from "react-icons/im";
 import { useState, useEffect } from 'react';
+import Link  from 'next/link';
 
 import { MenuItem } from '@mui/material';
 const ContactForm = () => {
@@ -39,8 +40,6 @@ const ContactForm = () => {
     setIsSubmitting(true);
     setError(null);
     setSuccess(false);
-
-    
 
     try {
       const response = await fetch('https://webbackend-zges.onrender.com/api/contact', {
@@ -162,14 +161,14 @@ const ContactForm = () => {
                           {
                             icon: <FaWhatsapp className="text-1xl hover:text-orange-400" />,
                             text: (
-                              <a
+                              <Link
                                 href="https://wa.me/+919525104860"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="flex items-center gap-3 hover:text-orange-400 transition duration-500"
                               >
                                 +91 95251 04860
-                              </a>
+                              </Link>
                             ),
                           },
                           {
@@ -329,9 +328,9 @@ const ContactForm = () => {
                             />
                             <label>
                               I agree to the{' '}
-                              <a href="/terms" className="text-blue-600 underline hover:text-blue-800">
+                              <Link href="/terms" className="text-blue-600 underline hover:text-blue-800">
                                 Terms and Conditions
-                              </a>
+                              </Link>
                               .
                             </label>
                           </div>
