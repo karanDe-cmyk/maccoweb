@@ -27,7 +27,7 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
-        <div className="fixed bottom-5 left-5 z-50">
+        <div className="fixed bottom-5 right-5 z-50">
             <Link 
               href="https://wa.me/+919525104860" 
               target="_blank" 
