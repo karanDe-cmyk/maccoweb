@@ -2,7 +2,6 @@ import { Inter, Roboto_Mono } from 'next/font/google';
 import "./globals.css";
 import Link from 'next/link';
 import { Metadata } from "next";
-import { notFound } from 'next/navigation';
 
 const inter = Inter({
   variable: '--font-inter',
