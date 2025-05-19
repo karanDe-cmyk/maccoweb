@@ -34,7 +34,7 @@ const EmployeeTestimonials = () => {
     const fetchEmployees = async () => {
       try {
         setLoading(true);
-        const response = await axios.get('http://localhost:5001/api/employees');
+        const response = await axios.get('https://webbackend-zges.onrender.com/api/employees');
         console.log("Api Response:", response)
         setTestimonials(response.data || []); // Handle potential undefined data
       } catch (err) {
