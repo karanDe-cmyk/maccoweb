@@ -30,7 +30,7 @@ const titleMap = {
   'contact': 'Contact Us',
   'careers': 'Careers',
   'portfolio': 'Portfolio',
-  'case-study': 'Case Study'
+  'casestudy': 'Case Study'
 };
 
 export async function generateMetadata({ params }: { params?: { [key: string]: string } }): Promise<Metadata> {
