@@ -30,10 +30,10 @@ const titleMap = {
   'contact': 'Contact Us',
   'careers': 'Careers',
   'portfolio': 'Portfolio',
-  'casestudy': 'Case Study'
+  'case-study': 'Case Study'
 };
 
-export async function generateMetadata({ params }: { params?: { [key: string]: string } }): Promise<Metadata> {
+export async function generateMetadata({ params }) {
   let path = '';
   
   if (params) {
