@@ -1,18 +1,18 @@
-import { GeistSans, GeistMono } from "next/font/google";
+import { Inter, Roboto_Mono } from 'next/font/google';
 import "./globals.css";
 import Link from 'next/link';
 import { Metadata } from "next";
 import { notFound } from 'next/navigation';
 
-const geistSans = GeistSans({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-})
+const inter = Inter({
+  variable: '--font-inter',
+  subsets: ['latin'],
+});
 
-const geistMono = GeistMono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-})
+const robotoMono = Roboto_Mono({
+  variable: '--font-roboto-mono',
+  subsets: ['latin'],
+});
 
 const titleMap = {
   'about': 'About Us',
