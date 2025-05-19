@@ -14,7 +14,7 @@ const geistMono = GeistMono({
   subsets: ["latin"],
 })
 
-const titleMap: Record<string, string> = {
+const titleMap = {
   'about': 'About Us',
   'service': 'Our Services',
   'AndroidAppDevelopment': 'Android App Development',
